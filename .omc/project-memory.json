@@ -1,0 +1,50 @@
+{
+  "version": "1.0.0",
+  "lastScanned": 1773260620414,
+  "projectRoot": "/home/tostcr/projects/toilet-game",
+  "techStack": {
+    "languages": [],
+    "frameworks": [],
+    "packageManager": null,
+    "runtime": null
+  },
+  "build": {
+    "buildCommand": null,
+    "testCommand": null,
+    "lintCommand": null,
+    "devCommand": null,
+    "scripts": {}
+  },
+  "conventions": {
+    "namingStyle": null,
+    "importStyle": null,
+    "testPattern": null,
+    "fileOrganization": null
+  },
+  "structure": {
+    "isMonorepo": false,
+    "workspaces": [],
+    "mainDirectories": [],
+    "gitBranches": {
+      "defaultBranch": "master",
+      "branchingStrategy": null
+    }
+  },
+  "customNotes": [],
+  "directoryMap": {},
+  "hotPaths": [
+    {
+      "path": "README.md",
+      "accessCount": 1,
+      "lastAccessed": 1773262967851,
+      "type": "file"
+    },
+    {
+      "path": "ROADMAP.md",
+      "accessCount": 1,
+      "lastAccessed": 1773263011770,
+      "type": "file"
+    }
+  ],
+  "userDirectives": []
+}
