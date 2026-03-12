@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://b4tnyxjfem6on"]
+
+[ext_resource type="Texture2D" uid="uid://c2kv6uaof6hj4" path="res://textures/Tiles015/Tiles015_4K_Color.jpg" id="1_a6wem"]
+[ext_resource type="Texture2D" uid="uid://bfn2idxjsarb4" path="res://textures/Tiles015/Tiles015_4K_Roughness.jpg" id="2_m7svm"]
+
+[resource]
+albedo_texture = ExtResource("1_a6wem")
+roughness_texture = ExtResource("2_m7svm")
