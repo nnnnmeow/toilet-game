@@ -15,6 +15,8 @@ extends CharacterBody3D
 @export var can_sprint : bool = false
 ## Can we press to enter freefly mode (noclip)?
 @export var can_freefly : bool = false
+## Can we interact with objects?
+@export var can_interact : bool = true
 
 @export_group("Speeds")
 ## Look around rotation speed.
@@ -43,6 +45,8 @@ extends CharacterBody3D
 @export var input_sprint : String = "sprint"
 ## Name of Input Action to toggle freefly mode.
 @export var input_freefly : String = "freefly"
+## Name of Input Action to interact.
+@export var input_interact : String = "interact"
 
 var mouse_captured : bool = false
 var look_rotation : Vector2
@@ -77,6 +81,16 @@ func _unhandled_input(event: InputEvent) -> void:
 			disable_freefly()
 
 func _physics_process(delta: float) -> void:
+	
+	%InteractText.hide()
+	# Get colliding item
+	if %SeeCast.is_colliding():
+		var target = %SeeCast.get_collider()
+		if target != null and target.has_method("interact"):
+			%InteractText.show()	
+			if Input.is_action_just_pressed("interact"):
+				target.interact()
+		
 	# If freeflying, handle freefly and nothing else
 	if can_freefly and freeflying:
 		var input_dir := Input.get_vector(input_left, input_right, input_forward, input_back)
