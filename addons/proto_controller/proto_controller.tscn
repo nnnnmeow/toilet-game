@@ -60,3 +60,24 @@ grow_vertical = 2
 unique_name_in_owner = true
 layout_mode = 2
 text = "Press E to interact"
+
+[node name="BoxContainer2" type="BoxContainer" parent="CanvasLayer" unique_id=1077197000]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -111.0
+offset_bottom = 49.0
+grow_horizontal = 0
+
+[node name="Label" type="Label" parent="CanvasLayer/BoxContainer2" unique_id=1119224498]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+text = "Flushes left: "
+
+[node name="FlushesAmountText" type="Label" parent="CanvasLayer/BoxContainer2" unique_id=1748279115]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+text = "0"

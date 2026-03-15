@@ -52,6 +52,8 @@ var mouse_captured : bool = false
 var look_rotation : Vector2
 var move_speed : float = 0.0
 var freeflying : bool = false
+var flush_amount : int = 10
+var interaction_cooldown : int = 2
 
 ## IMPORTANT REFERENCES
 @onready var head: Node3D = $Head
@@ -81,15 +83,21 @@ func _unhandled_input(event: InputEvent) -> void:
 			disable_freefly()
 
 func _physics_process(delta: float) -> void:
+	%FlushesAmountText.text = str(flush_amount)
 	
 	%InteractText.hide()
 	# Get colliding item
+	var callable = Callable(self, "try_flushing")
 	if %SeeCast.is_colliding():
 		var target = %SeeCast.get_collider()
 		if target != null and target.has_method("interact"):
 			%InteractText.show()	
-			if Input.is_action_just_pressed("interact"):
-				target.interact()
+			if Input.is_action_just_pressed("interact") and can_interact:
+				can_interact = false
+				target.interact(callable)
+				
+				await get_tree().create_timer(interaction_cooldown).timeout
+				can_interact = true
 		
 	# If freeflying, handle freefly and nothing else
 	if can_freefly and freeflying:
@@ -190,3 +198,11 @@ func check_input_mappings():
 	if can_freefly and not InputMap.has_action(input_freefly):
 		push_error("Freefly disabled. No InputAction found for input_freefly: " + input_freefly)
 		can_freefly = false
+
+
+func try_flushing() -> int:
+	if flush_amount > 0:
+		flush_amount -= 1
+		return 1
+	else:
+		return 0
