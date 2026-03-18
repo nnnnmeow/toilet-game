@@ -54,10 +54,12 @@ var move_speed : float = 0.0
 var freeflying : bool = false
 var flush_amount : int = 10
 var interaction_cooldown : int = 2
+var inventory_open: bool = false
 
 ## IMPORTANT REFERENCES
 @onready var head: Node3D = $Head
 @onready var collider: CollisionShape3D = $Collider
+@onready var inventory_ui: SimpleInventoryUI = $"../SimpleInventoryUI"
 
 func _ready() -> void:
 	check_input_mappings()
@@ -86,6 +88,14 @@ func _physics_process(delta: float) -> void:
 	%FlushesAmountText.text = str(flush_amount)
 	
 	%InteractText.hide()
+	
+	if Input.is_action_just_pressed("toggle_inventory"):
+		inventory_open = !inventory_open
+		if inventory_open:
+			inventory_ui.show()
+		else:
+			inventory_ui.hide()
+		
 	# Get colliding item
 	var callable = Callable(self, "try_flushing")
 	if %SeeCast.is_colliding():
@@ -98,7 +108,9 @@ func _physics_process(delta: float) -> void:
 				
 				await get_tree().create_timer(interaction_cooldown).timeout
 				can_interact = true
-		
+	
+	
+	
 	# If freeflying, handle freefly and nothing else
 	if can_freefly and freeflying:
 		var input_dir := Input.get_vector(input_left, input_right, input_forward, input_back)
@@ -200,8 +212,8 @@ func check_input_mappings():
 		can_freefly = false
 
 
-func try_flushing() -> int:
-	if flush_amount > 0:
+func try_flushing(toilet: bool) -> int:
+	if flush_amount > 0 and toilet:
 		flush_amount -= 1
 		return 1
 	else:
