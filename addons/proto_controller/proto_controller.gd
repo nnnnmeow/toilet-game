@@ -55,11 +55,30 @@ var freeflying : bool = false
 var flush_amount : int = 10
 var interaction_cooldown : int = 2
 var inventory_open: bool = false
+var rng = RandomNumberGenerator.new()
+var events_dictionary = {
+	1: "Event",
+	17: "Enemy",
+	100: "Item",
+}
+var categories_dictionary = {
+	1: "rare_item",
+	3: "upgrade",
+	5: "alcohol",
+	15: "money",
+	40: "food",
+	70: "materials",
+	100: "shit",
+}
 
 ## IMPORTANT REFERENCES
 @onready var head: Node3D = $Head
 @onready var collider: CollisionShape3D = $Collider
+@onready var raycast: RayCast3D = %SeeCast
 @onready var inventory_ui: SimpleInventoryUI = $"../SimpleInventoryUI"
+@onready var flushes_text: Label = %FlushesAmountText
+@onready var interact_text: Label = %InteractText
+@onready var drop_text: Label = %DropText
 
 func _ready() -> void:
 	check_input_mappings()
@@ -85,9 +104,9 @@ func _unhandled_input(event: InputEvent) -> void:
 			disable_freefly()
 
 func _physics_process(delta: float) -> void:
-	%FlushesAmountText.text = str(flush_amount)
+	flushes_text.text = str(flush_amount)
 	
-	%InteractText.hide()
+	interact_text.hide()
 	
 	if Input.is_action_just_pressed("toggle_inventory"):
 		inventory_open = !inventory_open
@@ -98,16 +117,18 @@ func _physics_process(delta: float) -> void:
 		
 	# Get colliding item
 	var callable = Callable(self, "try_flushing")
-	if %SeeCast.is_colliding():
-		var target = %SeeCast.get_collider()
+	if raycast.is_colliding():
+		var target = raycast.get_collider()
 		if target != null and target.has_method("interact"):
-			%InteractText.show()	
+			interact_text.show()	
 			if Input.is_action_just_pressed("interact") and can_interact:
 				can_interact = false
+				drop_text.show()
 				target.interact(callable)
 				
 				await get_tree().create_timer(interaction_cooldown).timeout
 				can_interact = true
+				drop_text.hide()
 	
 	
 	
@@ -214,7 +235,17 @@ func check_input_mappings():
 
 func try_flushing(toilet: bool) -> int:
 	if flush_amount > 0 and toilet:
+		var drop_chance = rng.randf_range(0, 100.0)
+		var drop;
+		for drops in events_dictionary:
+			if drops >= drop_chance:
+				drop = events_dictionary[drops]
+				break
+		drop_text.text = "You got " + str(drop);
 		flush_amount -= 1
 		return 1
 	else:
 		return 0
+
+func get_item_by_category():
+	return

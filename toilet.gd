@@ -1,7 +1,7 @@
 extends StaticBody3D
 
 func interact(callback: Callable):
-	var res = callback.call(true)
+	var res = await callback.call(true)
 	if res == 1:
 		%FlushSFX.play()
 		%AnimationPlayer.play("flush")

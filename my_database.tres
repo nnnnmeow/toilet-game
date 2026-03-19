@@ -1,16 +1,47 @@
 [gd_resource type="InventoryDatabase" format=3 uid="uid://dfitfj26yr1mw"]
 
+[sub_resource type="ItemCategory" id="ItemCategory_3cgd4"]
+id = "5"
+name = "Material"
+
+[sub_resource type="ItemCategory" id="ItemCategory_hpg80"]
+id = "4"
+name = "Food"
+
+[sub_resource type="ItemCategory" id="ItemCategory_3ujbj"]
+id = "2"
+name = "Alcohol"
+
+[sub_resource type="ItemCategory" id="ItemCategory_2dfsx"]
+id = "1"
+name = "Upgrade"
+
+[sub_resource type="ItemCategory" id="ItemCategory_hv7jj"]
+id = "0"
+name = "RareItem"
+
+[sub_resource type="ItemCategory" id="ItemCategory_togb5"]
+id = "3"
+name = "Money"
+
+[sub_resource type="ItemCategory" id="ItemCategory_lqpwl"]
+id = "6"
+name = "Shit"
+
 [sub_resource type="ItemDefinition" id="ItemDefinition_3cgd4"]
 id = "wood"
 max_stack = 32
 name = "Wood"
 weight = 4.0
+categories = Array[ItemCategory]([SubResource("ItemCategory_3cgd4")])
 
 [sub_resource type="ItemDefinition" id="ItemDefinition_hpg80"]
 id = "whiskey"
 max_stack = 1
 name = "Whiskey"
 weight = 1.5
+categories = Array[ItemCategory]([SubResource("ItemCategory_3ujbj")])
 
 [resource]
 items = Array[ItemDefinition]([SubResource("ItemDefinition_3cgd4"), SubResource("ItemDefinition_hpg80")])
+item_categories = Array[ItemCategory]([SubResource("ItemCategory_3cgd4"), SubResource("ItemCategory_hpg80"), SubResource("ItemCategory_3ujbj"), SubResource("ItemCategory_2dfsx"), SubResource("ItemCategory_hv7jj"), SubResource("ItemCategory_togb5"), SubResource("ItemCategory_lqpwl")])

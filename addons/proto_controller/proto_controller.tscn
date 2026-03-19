@@ -69,7 +69,7 @@ offset_left = -111.0
 offset_bottom = 49.0
 grow_horizontal = 0
 
-[node name="Label" type="Label" parent="CanvasLayer/BoxContainer2" unique_id=1119224498]
+[node name="FlText" type="Label" parent="CanvasLayer/BoxContainer2" unique_id=1119224498]
 layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 0
@@ -81,3 +81,16 @@ layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 0
 text = "0"
+
+[node name="BoxContainer3" type="BoxContainer" parent="CanvasLayer" unique_id=874293375]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -20.0
+offset_right = 20.0
+offset_bottom = 40.0
+grow_horizontal = 2
+
+[node name="DropText" type="Label" parent="CanvasLayer/BoxContainer3" unique_id=450486774]
+unique_name_in_owner = true
+layout_mode = 2
