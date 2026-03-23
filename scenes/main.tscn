@@ -91,37 +91,37 @@ shadow_enabled = true
 use_collision = true
 
 [node name="CSGBox3D" type="CSGBox3D" parent="CSGCombiner3D" unique_id=665332976]
-transform = Transform3D(0.7832948, 0, 0, 0, 0.9582252, 0, 0, 0, 0.9582252, 0.22892848, 0, -0.7179245)
-size = Vector3(2.1619751, 1, 4.7000003)
+transform = Transform3D(0.7832948, 0, 0, 0, 0.9582252, 0, 0, 0, 0.9582252, 0.22892848, 0.3736049, -0.7937918)
+size = Vector3(2.1619751, 0.22021484, 4.85835)
 material = ExtResource("1_0ld40")
 
 [node name="CSGBox3D6" type="CSGBox3D" parent="CSGCombiner3D" unique_id=378706313]
-transform = Transform3D(1, 0, 0, 0, 0.09241921, 0, 0, 0, 1, -0.25, 3.4132853, -0.79999995)
-size = Vector3(2.8, 1, 4.7000003)
+transform = Transform3D(1, 0, 0, 0, 0.09241921, 0, 0, 0, 1, 0.21639407, 3.4132853, -0.77612305)
+size = Vector3(1.6329834, 1, 4.6522465)
 material = ExtResource("2_gqmmt")
 
 [node name="CSGBox3D2" type="CSGBox3D" parent="CSGCombiner3D" unique_id=987516176]
-transform = Transform3D(3.8, 0, 0, 0, 3.8, 0, 0, 0, 3.8, 1.0500001, 1.33, -0.79999995)
-size = Vector3(0.001, 1.1, 1.3000001)
+transform = Transform3D(3.8, 0, 0, 0, 3.8, 0, 0, 0, 3.8, 1.0500001, 1.9241211, -0.79313457)
+size = Vector3(0.001, 0.7873047, 1.2209961)
 material = ExtResource("2_gqmmt")
 
 [node name="CSGBox3D4" type="CSGBox3D" parent="CSGCombiner3D" unique_id=333701984]
-transform = Transform3D(-1.9932394e-07, 0, 4.56, 0, 4.56, 0, -4.56, 0, -1.9932394e-07, -0.1442129, 1.03, -3.1)
-size = Vector3(0.001, 1.1, 0.86528325)
+transform = Transform3D(-1.9932394e-07, 0, 4.56, 0, 4.56, 0, -4.56, 0, -1.9932394e-07, 0.21650413, 1.9525203, -3.1)
+size = Vector3(0.001, 0.6530029, 0.37109986)
 material = ExtResource("2_gqmmt")
 
 [node name="CSGBox3D5" type="CSGBox3D" parent="CSGCombiner3D" unique_id=2047668207]
-transform = Transform3D(-2.3254458e-07, 0, 5.3199997, 0, 5.3199997, 0, -5.3199997, 0, -2.3254458e-07, -0.020114124, 0.5044875, 1.5)
-size = Vector3(0.001, 1.1280029, 0.6555054)
+transform = Transform3D(-2.3254458e-07, 0, 5.3199997, 0, 5.3199997, 0, -5.3199997, 0, -2.3254458e-07, 0.2242664, 1.9283764, 1.5)
+size = Vector3(0.001, 0.57631224, 0.31648177)
 material = ExtResource("2_gqmmt")
 
 [node name="CSGBox3D3" type="CSGBox3D" parent="CSGCombiner3D" unique_id=1877560085]
-transform = Transform3D(3.8, 0, 0, 0, 3.8, 0, 0, 0, 3.8, -0.6099998, 1.4200001, -0.6999999)
-size = Vector3(0.001, 1.2, 1.3000001)
+transform = Transform3D(3.8, 0, 0, 0, 3.8, 0, 0, 0, 3.8, -0.6099998, 1.9445411, -0.80399877)
+size = Vector3(0.001, 0.787793, 1.2139161)
 material = ExtResource("2_gqmmt")
 
 [node name="ProtoController" parent="." unique_id=735761445 instance=ExtResource("1_ig7tw")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.33771008, 0.87978506, -2.0518248)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.33710304, 0.8795223, -2.0523949)
 can_freefly = true
 
 [node name="OmniLight3D" type="OmniLight3D" parent="." unique_id=1383329618]

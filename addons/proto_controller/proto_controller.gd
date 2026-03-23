@@ -120,11 +120,11 @@ func _physics_process(delta: float) -> void:
 	if raycast.is_colliding():
 		var target = raycast.get_collider()
 		if target != null and target.has_method("interact"):
-			interact_text.show()	
+			interact_text.show()
 			if Input.is_action_just_pressed("interact") and can_interact:
 				can_interact = false
-				drop_text.show()
-				target.interact(callable)
+				if target.interact(callable) == 1:
+					drop_text.show()
 				
 				await get_tree().create_timer(interaction_cooldown).timeout
 				can_interact = true
