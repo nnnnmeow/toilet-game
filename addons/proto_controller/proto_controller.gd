@@ -47,6 +47,8 @@ extends CharacterBody3D
 @export var input_freefly : String = "freefly"
 ## Name of Input Action to interact.
 @export var input_interact : String = "interact"
+## Is any item being held by the player?
+var held_item: Node3D = null;
 
 var mouse_captured : bool = false
 var look_rotation : Vector2
@@ -129,6 +131,10 @@ func _physics_process(delta: float) -> void:
 				await get_tree().create_timer(interaction_cooldown).timeout
 				can_interact = true
 				drop_text.hide()
+	if held_item != null:
+		if Input.is_action_just_pressed("drop"): 
+			can_interact = true;
+			held_item.drop();
 	
 	
 	

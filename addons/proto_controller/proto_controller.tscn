@@ -39,7 +39,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.7, 0)
 [node name="SeeCast" type="RayCast3D" parent="Head/Camera3D" unique_id=296209692]
 unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, 0.008066773, 0, 0, 0, 116.73672, 0, 0.0048902035, 0)
-target_position = Vector3(0, -1, -0.015)
+target_position = Vector3(0, -2, -0.015)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=388671027]
 
