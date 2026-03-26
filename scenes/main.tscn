@@ -6,7 +6,7 @@
 [ext_resource type="Material" uid="uid://dxfihveo17qsu" path="res://materials/mat_tiles075.tres" id="2_gqmmt"]
 [ext_resource type="PackedScene" uid="uid://2pmbxfd78vw2" path="res://models/light_bulb/light_bulb.tscn" id="5_tbgi4"]
 [ext_resource type="Script" uid="uid://d2a51wii775v" path="res://toilet.gd" id="5_tefeu"]
-[ext_resource type="PackedScene" uid="uid://cbrpxk83nsfi1" path="res://scenes/whiskey.tscn" id="8_tipki"]
+[ext_resource type="PackedScene" uid="uid://cbrpxk83nsfi1" path="res://scenes/items/whiskey.tscn" id="8_tipki"]
 [ext_resource type="PackedScene" uid="uid://oe1dek8fdwvn" path="res://models/dirty_public_toilet/toilet.tscn" id="14_a8y0u"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_7dm0k"]
@@ -80,5 +80,5 @@ script = ExtResource("5_tefeu")
 [node name="light_bulb(credited)" parent="." unique_id=1299139721 instance=ExtResource("5_tbgi4")]
 transform = Transform3D(0.099999964, 0, 0, 0, 0.099999964, 0, 0, 0, 0.099999964, 0.20000015, 3.0499992, -0.5899999)
 
-[node name="whiskey" parent="." unique_id=1472256865 instance=ExtResource("8_tipki")]
+[node name="Whiskey" parent="." unique_id=1472256865 instance=ExtResource("8_tipki")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.48992193, 2.19367, -2.8184748)
