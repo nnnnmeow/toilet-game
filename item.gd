@@ -4,8 +4,7 @@ extends RigidBody3D
 @onready var main = $"../";
 @onready var controller = $"../ProtoController";
 
-func interact(callback: Callable):
-	await callback.call(false);
+func interact():
 	get_parent().remove_child(self);
 	head.add_child(self);
 	self.position = Vector3(0.5, -0.4, -0.5);

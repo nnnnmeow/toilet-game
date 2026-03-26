@@ -54,24 +54,8 @@ var mouse_captured : bool = false
 var look_rotation : Vector2
 var move_speed : float = 0.0
 var freeflying : bool = false
-var flush_amount : int = 10
 var interaction_cooldown : int = 2
 var inventory_open: bool = false
-var rng = RandomNumberGenerator.new()
-var events_dictionary = {
-	1: "Event",
-	17: "Enemy",
-	100: "Item",
-}
-var categories_dictionary = {
-	1: "rare_item",
-	3: "upgrade",
-	5: "alcohol",
-	15: "money",
-	40: "food",
-	70: "materials",
-	100: "shit",
-}
 
 ## IMPORTANT REFERENCES
 @onready var head: Node3D = $Head
@@ -80,6 +64,7 @@ var categories_dictionary = {
 @onready var flushes_text: Label = %FlushesAmountText
 @onready var interact_text: Label = %InteractText
 @onready var drop_text: Label = %DropText
+@onready var toilet = $"../Toilet(credited)"
 
 func _ready() -> void:
 	check_input_mappings()
@@ -105,7 +90,7 @@ func _unhandled_input(event: InputEvent) -> void:
 			disable_freefly()
 
 func _physics_process(delta: float) -> void:
-	flushes_text.text = str(flush_amount)
+	flushes_text.text = str(toilet.flush_amount)
 	
 	interact_text.hide()
 	
@@ -113,15 +98,15 @@ func _physics_process(delta: float) -> void:
 	# if Input.is_action_just_pressed("toggle_inventory"):
 		
 	# Get colliding item
-	var callable = Callable(self, "try_flushing")
 	if raycast.is_colliding():
 		var target = raycast.get_collider()
 		if target != null and target.has_method("interact"):
 			interact_text.show()
 			if Input.is_action_just_pressed("interact") and can_interact:
 				can_interact = false
-				if target.interact(callable) == 1:
-					drop_text.show()
+				var text = target.interact()
+				if text != null:
+					drop_text.text = "You got " + text;
 				
 				await get_tree().create_timer(interaction_cooldown).timeout
 				can_interact = true
@@ -232,21 +217,3 @@ func check_input_mappings():
 	if can_freefly and not InputMap.has_action(input_freefly):
 		push_error("Freefly disabled. No InputAction found for input_freefly: " + input_freefly)
 		can_freefly = false
-
-
-func try_flushing(toilet: bool) -> int:
-	if flush_amount > 0 and toilet:
-		var drop_chance = rng.randf_range(0, 100.0)
-		var drop;
-		for drops in events_dictionary:
-			if drops >= drop_chance:
-				drop = events_dictionary[drops]
-				break
-		drop_text.text = "You got " + str(drop);
-		flush_amount -= 1
-		return 1
-	else:
-		return 0
-
-func get_item_by_category():
-	return
