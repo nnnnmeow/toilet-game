@@ -6,8 +6,6 @@
 [ext_resource type="Material" uid="uid://dxfihveo17qsu" path="res://materials/mat_tiles075.tres" id="2_gqmmt"]
 [ext_resource type="PackedScene" uid="uid://2pmbxfd78vw2" path="res://models/light_bulb/light_bulb.tscn" id="5_tbgi4"]
 [ext_resource type="Script" uid="uid://d2a51wii775v" path="res://toilet.gd" id="5_tefeu"]
-[ext_resource type="InventoryDatabase" uid="uid://dfitfj26yr1mw" path="res://my_database.tres" id="7_o6xl0"]
-[ext_resource type="Script" uid="uid://du4odj2yajra2" path="res://addons/inventory-system-demos/simple-transfer/simple_inventory_ui.gd" id="9_85g3d"]
 [ext_resource type="Texture2D" uid="uid://chnbv000gmx4f" path="res://models/bottles/textures/Material.003_baseColor.png" id="10_eb6dy"]
 [ext_resource type="Script" uid="uid://n7ger1gnti55" path="res://item.gd" id="10_trceg"]
 [ext_resource type="Texture2D" uid="uid://yhpw8nw8mw5b" path="res://models/bottles/textures/Material.003_metallicRoughness.png" id="11_trceg"]
@@ -134,21 +132,6 @@ script = ExtResource("5_tefeu")
 
 [node name="light_bulb(credited)" parent="." unique_id=1299139721 instance=ExtResource("5_tbgi4")]
 transform = Transform3D(0.099999964, 0, 0, 0, 0.099999964, 0, 0, 0, 0.099999964, 0.20000015, 3.0499992, -0.5899999)
-
-[node name="Inventory" type="Inventory" parent="." unique_id=353623162]
-database = ExtResource("7_o6xl0")
-unique_name_in_owner = true
-
-[node name="SimpleInventoryUI" type="ItemList" parent="." unique_id=1667044639 node_paths=PackedStringArray("inventory")]
-visible = false
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-script = ExtResource("9_85g3d")
-inventory = NodePath("../Inventory")
-metadata/_custom_type_script = "uid://du4odj2yajra2"
 
 [node name="whiskey" type="RigidBody3D" parent="." unique_id=1894487661]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.48992193, 2.19367, -2.8184748)

@@ -77,7 +77,6 @@ var categories_dictionary = {
 @onready var head: Node3D = $Head
 @onready var collider: CollisionShape3D = $Collider
 @onready var raycast: RayCast3D = %SeeCast
-@onready var inventory_ui: SimpleInventoryUI = $"../SimpleInventoryUI"
 @onready var flushes_text: Label = %FlushesAmountText
 @onready var interact_text: Label = %InteractText
 @onready var drop_text: Label = %DropText
@@ -110,12 +109,8 @@ func _physics_process(delta: float) -> void:
 	
 	interact_text.hide()
 	
-	if Input.is_action_just_pressed("toggle_inventory"):
-		inventory_open = !inventory_open
-		if inventory_open:
-			inventory_ui.show()
-		else:
-			inventory_ui.hide()
+	# will do that later
+	# if Input.is_action_just_pressed("toggle_inventory"):
 		
 	# Get colliding item
 	var callable = Callable(self, "try_flushing")
