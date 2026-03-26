@@ -1,6 +1,7 @@
 extends StaticBody3D
 
-@onready var main = $"../";
+@onready var whiskey_bottle: Resource =  preload("res://scenes/items/whiskey.tscn");
+
 var flush_amount : int = 10
 var rng = RandomNumberGenerator.new()
 var events_dictionary = {
@@ -44,13 +45,13 @@ func try_flushing():
 		return null
 
 func spawn_item():
-	print("spawning item!")
-	var scene = preload("res://scenes/items/whiskey.tscn");
-	var item = scene.instantiate();
-	main.add_child(item);
-	item.position = self.position + Vector3(0, 3, 0);
-	item.scale = Vector3(0.01, 0.01, 0.01);
-	print(item.position)
-	item.apply_impulse(Vector3(0, 10, 0));
-	print(item.visible, " ", item.get_child_count())
-	print(item.scale)
+	#print("spawning item!")
+	var item = whiskey_bottle.instantiate();
+	add_child(item);
+	item.position = self.position + Vector3(-0.15, 0.5, -0.5);
+	#print(self.position)
+	#item.scale = Vector3(0.01, 0.01, 0.01);
+	#print(item.position)
+	item.apply_impulse(Vector3(0, 2, -2));
+	#print(item.visible, " ", item.get_child_count())
+	#print(item.scale)
