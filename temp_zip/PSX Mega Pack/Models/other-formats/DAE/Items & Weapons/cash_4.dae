@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<COLLADA xmlns="http://www.collada.org/2005/11/COLLADASchema" version="1.4.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <asset>
+    <contributor>
+      <author>Blender User</author>
+      <authoring_tool>Blender 3.4.0 commit date:2022-12-06, commit time:18:46, hash:a95bf1ac01be</authoring_tool>
+    </contributor>
+    <created>2025-12-17T19:04:24</created>
+    <modified>2025-12-17T19:04:24</modified>
+    <unit name="meter" meter="1"/>
+    <up_axis>Z_UP</up_axis>
+  </asset>
+  <library_effects>
+    <effect id="money_1-effect">
+      <profile_COMMON>
+        <newparam sid="money_1_png-surface">
+          <surface type="2D">
+            <init_from>money_1_png</init_from>
+          </surface>
+        </newparam>
+        <newparam sid="money_1_png-sampler">
+          <sampler2D>
+            <source>money_1_png-surface</source>
+          </sampler2D>
+        </newparam>
+        <technique sid="common">
+          <lambert>
+            <emission>
+              <color sid="emission">0 0 0 1</color>
+            </emission>
+            <diffuse>
+              <texture texture="money_1_png-sampler" texcoord="UVMap"/>
+            </diffuse>
+            <index_of_refraction>
+              <float sid="ior">1.45</float>
+            </index_of_refraction>
+          </lambert>
+        </technique>
+      </profile_COMMON>
+    </effect>
+  </library_effects>
+  <library_images>
+    <image id="money_1_png" name="money_1_png">
+      <init_from>money_1.png</init_from>
+    </image>
+  </library_images>
+  <library_materials>
+    <material id="money_1-material" name="money_1">
+      <instance_effect url="#money_1-effect"/>
+    </material>
+  </library_materials>
+  <library_geometries>
+    <geometry id="cash_4-mesh" name="cash_4">
+      <mesh>
+        <source id="cash_4-mesh-positions">
+          <float_array id="cash_4-mesh-positions-array" count="48">-0.06232178 -0.114048 0 -0.06232178 -0.111548 0.03636318 -0.06232178 0.114048 0 -0.06232178 0.111548 0.03636318 0.06274372 -0.114048 0 0.06274372 -0.111548 0.03636318 0.06274372 0.114048 0 0.06274372 0.111548 0.03636318 -0.06132179 0 0 -0.06132179 0 0.03136318 0.06174373 0 0 0.06174373 0 0.03136318 0.06174373 -0.057024 0.03386318 -0.06132179 -0.05702394 0.03386318 -0.06132179 0.057024 0.03386318 0.06174373 0.057024 0.03386318</float_array>
+          <technique_common>
+            <accessor source="#cash_4-mesh-positions-array" count="16" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="cash_4-mesh-normals">
+          <float_array id="cash_4-mesh-normals-array" count="105">0.9999131 -0.009155094 0.009488463 0.9998793 -0.01488691 0.00445801 0.9998322 -0.01827973 -0.001256704 0 0.997645 0.06858885 0 0.997645 0.06858885 0 -0.997645 0.06858885 0 -0.9976451 0.06858885 0.9999131 0.009155094 0.009488463 0.9998793 0.01488691 0.00445801 0.9999873 0 0.005037009 0 0.04480701 0.9989957 0 0.0458033 0.9989505 0 0.04480701 0.9989957 0 -0.04480695 0.9989957 0 0 1 0 0 1 -0.9999131 -0.009155094 0.009488403 -0.9998793 -0.01488691 0.00445801 -0.9999873 0 0.005037009 0 0 -1 0 0 -1 0 0 -1 1 0 0 0 0 -1 0 0 -1 0 -0.04580318 0.9989506 0 -0.04580312 0.9989506 -1 0 0 -0.9999131 0.009155094 0.009488403 -0.9998793 0.01488691 0.00445801 -0.9998322 0.01827973 -0.001256704 0.9998322 0.01827973 -0.001256704 0 0.0458033 0.9989505 0 -0.04480695 0.9989957 -0.9998322 -0.01827973 -0.001256704</float_array>
+          <technique_common>
+            <accessor source="#cash_4-mesh-normals-array" count="35" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="cash_4-mesh-map-0">
+          <float_array id="cash_4-mesh-map-0-array" count="168">0.5625 0.4453125 0.5 0.375 0.5 0.4453125 0.8945313 0.375 1 0.3046875 0.8949588 0.3046875 1 0.375 0.8949588 0.3046875 1 0.3046875 0.6875 0.4453125 0.75 0.375 0.625 0.375 0.5625 1 0.5 0.7265625 0.5625 0.7265625 0.6875 0.7265625 0.625 1 0.625 0.7265625 0.5625 0.4453125 0.5 0.375 0.625 0.375 0.625 0.453125 0.75 0.7265625 0.625 0.7265625 0.625 0.7265625 0.5625 1 0.5625 0.7265625 0.625 0.375 0.625 0.4453125 0.6875 0.4453125 0.5 0.453125 0.625 0.7265625 0.5 0.7265625 0.75 1 0.6875 0.7265625 0.75 0.7265625 0.625 0.375 0.625 0.4453125 0.5625 0.4453125 0.6875 0.4453125 0.75 0.375 0.75 0.4453125 0.625 0.375 0.5625 0.4453125 0.625 0.4453125 0.625 0.375 0.6875 0.4453125 0.625 0.4453125 0.5625 0.4453125 0.625 0.375 0.5 0.375 0.8945313 0.375 1 0.375 1 0.3046875 1 0.375 0.8945313 0.375 0.8949588 0.3046875 0.6875 0.4453125 0.75 0.4453125 0.75 0.375 0.5625 1 0.5 1 0.5 0.7265625 0.6875 0.7265625 0.6875 1 0.625 1 0.5625 0.4453125 0.5 0.4453125 0.5 0.375 0.625 0.453125 0.75 0.453125 0.75 0.7265625 0.625 0.7265625 0.625 1 0.5625 1 0.5 0.453125 0.625 0.453125 0.625 0.7265625 0.75 1 0.6875 1 0.6875 0.7265625 0.6875 0.4453125 0.625 0.375 0.75 0.375</float_array>
+          <technique_common>
+            <accessor source="#cash_4-mesh-map-0-array" count="84" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="cash_4-mesh-vertices">
+          <input semantic="POSITION" source="#cash_4-mesh-positions"/>
+        </vertices>
+        <triangles material="money_1-material" count="28">
+          <input semantic="VERTEX" source="#cash_4-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#cash_4-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#cash_4-mesh-map-0" offset="2" set="0"/>
+          <p>15 0 0 6 1 1 7 2 2 3 3 3 6 3 4 2 4 5 5 5 6 0 5 7 4 6 8 12 7 9 4 8 10 10 9 11 13 10 12 5 11 13 12 12 14 15 13 15 9 14 16 11 15 17 14 16 18 2 17 19 8 18 20 10 19 21 0 20 22 8 21 23 11 15 24 13 10 25 12 12 26 10 9 27 11 22 28 12 7 29 6 23 30 8 21 31 2 24 32 3 25 33 15 13 34 7 26 35 8 18 36 9 27 37 14 16 38 13 28 39 0 29 40 1 30 41 10 9 42 15 0 43 11 22 44 8 18 45 13 28 46 9 27 47 15 0 48 10 9 49 6 1 50 3 3 51 7 4 52 6 3 53 5 5 54 1 6 55 0 5 56 12 7 57 5 31 58 4 8 59 13 10 60 1 32 61 5 11 62 15 13 63 14 33 64 9 14 65 14 16 66 3 34 67 2 17 68 10 19 69 4 24 70 0 20 71 11 15 72 9 14 73 13 10 74 6 23 75 10 19 76 8 21 77 3 25 78 14 33 79 15 13 80 13 28 81 8 18 82 0 29 83</p>
+        </triangles>
+      </mesh>
+    </geometry>
+  </library_geometries>
+  <library_visual_scenes>
+    <visual_scene id="Scene" name="Scene">
+      <node id="cash_4" name="cash_4" type="NODE">
+        <matrix sid="transform">1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</matrix>
+        <instance_geometry url="#cash_4-mesh" name="cash_4">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="money_1-material" target="#money_1-material">
+                <bind_vertex_input semantic="UVMap" input_semantic="TEXCOORD" input_set="0"/>
+              </instance_material>
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+      </node>
+    </visual_scene>
+  </library_visual_scenes>
+  <scene>
+    <instance_visual_scene url="#Scene"/>
+  </scene>
+</COLLADA>

@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<COLLADA xmlns="http://www.collada.org/2005/11/COLLADASchema" version="1.4.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <asset>
+    <contributor>
+      <author>Blender User</author>
+      <authoring_tool>Blender 3.4.0 commit date:2022-12-06, commit time:18:46, hash:a95bf1ac01be</authoring_tool>
+    </contributor>
+    <created>2025-12-17T19:01:45</created>
+    <modified>2025-12-17T19:01:45</modified>
+    <unit name="meter" meter="1"/>
+    <up_axis>Z_UP</up_axis>
+  </asset>
+  <library_effects>
+    <effect id="concrete_1-effect">
+      <profile_COMMON>
+        <newparam sid="concrete_1_jpg-surface">
+          <surface type="2D">
+            <init_from>concrete_1_jpg</init_from>
+          </surface>
+        </newparam>
+        <newparam sid="concrete_1_jpg-sampler">
+          <sampler2D>
+            <source>concrete_1_jpg-surface</source>
+          </sampler2D>
+        </newparam>
+        <technique sid="common">
+          <lambert>
+            <emission>
+              <color sid="emission">0 0 0 1</color>
+            </emission>
+            <diffuse>
+              <texture texture="concrete_1_jpg-sampler" texcoord="UVMap"/>
+            </diffuse>
+            <index_of_refraction>
+              <float sid="ior">1.45</float>
+            </index_of_refraction>
+          </lambert>
+        </technique>
+      </profile_COMMON>
+    </effect>
+  </library_effects>
+  <library_images>
+    <image id="concrete_1_jpg" name="concrete_1_jpg">
+      <init_from>concrete_1.jpg</init_from>
+    </image>
+  </library_images>
+  <library_materials>
+    <material id="concrete_1-material" name="concrete_1">
+      <instance_effect url="#concrete_1-effect"/>
+    </material>
+  </library_materials>
+  <library_geometries>
+    <geometry id="beam_1-mesh" name="beam_1">
+      <mesh>
+        <source id="beam_1-mesh-positions">
+          <float_array id="beam_1-mesh-positions-array" count="48">1.999999 -0.13 0.199999 -2.000001 -0.1299998 0.1999993 1.999999 0.1300004 0.199999 -2.000001 0.1300001 0.1999993 1.999999 -0.1 0.229999 1.999999 0.1000003 0.229999 -2.000001 0.1000002 0.2299993 1.999999 0.1299999 -0.2000008 -2.000001 0.1299997 -0.2000005 1.999999 -0.1300004 -0.2000007 -2.000001 -0.1300002 -0.2000005 1.999999 -0.1000005 -0.2300007 -2.000001 -0.09999901 -0.2299996 -2.000001 -0.09999895 0.2300003 1.999999 0.1000008 -0.2300006 -2.000001 0.1000008 -0.2300001</float_array>
+          <technique_common>
+            <accessor source="#beam_1-mesh-positions-array" count="16" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="beam_1-mesh-normals">
+          <float_array id="beam_1-mesh-normals-array" count="48">0 1 -1.04308e-6 0 0.7071066 0.707107 0 -0.7071091 0.7071045 0 -0.7071066 -0.707107 0 0.7071147 -0.7070989 0 -1 1.11759e-6 3.02492e-7 1.49011e-7 1 -1.21072e-7 -2.45869e-6 -1 0 1 -1.11759e-6 0 0.7071066 0.707107 0 -0.7071065 0.7071072 -4.49567e-7 -0.707082 -0.7071316 0 0.7071144 -0.7070993 0 -1 1.11759e-6 0 5.21543e-6 1 -2.67846e-7 8.19559e-7 -1</float_array>
+          <technique_common>
+            <accessor source="#beam_1-mesh-normals-array" count="16" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="beam_1-mesh-map-0">
+          <float_array id="beam_1-mesh-map-0-array" count="96">1.055556 0.4444442 -0.05555552 0.5555554 1.055555 0.5555553 -0.05555552 0.4638888 1.055556 0.472222 1.055556 0.4638888 1.055556 0.5555554 -0.05555552 0.563889 -0.05555552 0.5555554 -0.05555558 0.5361111 1.055556 0.527778 1.055556 0.5361112 1.055556 0.4444442 -0.05555552 0.4361112 -0.05555552 0.4444444 1.055556 0.5555554 -0.05555552 0.4444444 1.055556 0.4444443 1.055556 0.472222 -0.05555552 0.5277776 1.055555 0.5277777 1.055555 0.4722219 -0.05555552 0.5277774 -0.05555558 0.472222 1.055556 0.4444442 -0.05555552 0.4444444 -0.05555552 0.5555554 -0.05555552 0.4638888 -0.05555552 0.4722222 1.055556 0.472222 1.055556 0.5555554 1.055556 0.5638887 -0.05555552 0.563889 -0.05555558 0.5361111 -0.05555552 0.5277774 1.055556 0.527778 1.055556 0.4444442 1.055555 0.436111 -0.05555552 0.4361112 1.055556 0.5555554 -0.05555552 0.5555554 -0.05555552 0.4444444 1.055556 0.472222 -0.05555552 0.4722222 -0.05555552 0.5277776 1.055555 0.4722219 1.055556 0.527778 -0.05555552 0.5277774</float_array>
+          <technique_common>
+            <accessor source="#beam_1-mesh-map-0-array" count="48" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="beam_1-mesh-vertices">
+          <input semantic="POSITION" source="#beam_1-mesh-positions"/>
+        </vertices>
+        <triangles material="concrete_1-material" count="16">
+          <input semantic="VERTEX" source="#beam_1-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#beam_1-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#beam_1-mesh-map-0" offset="2" set="0"/>
+          <p>7 0 0 3 0 1 2 0 2 3 1 3 5 1 4 2 1 5 0 2 6 13 2 7 1 2 8 10 3 9 11 3 10 9 3 11 7 4 12 15 4 13 8 4 14 0 5 15 10 5 16 9 5 17 5 6 18 13 6 19 4 6 20 14 7 21 12 7 22 15 7 23 7 8 24 8 8 25 3 8 26 3 9 27 6 9 28 5 9 29 0 10 30 4 10 31 13 10 32 10 11 33 12 11 34 11 11 35 7 12 36 14 12 37 15 12 38 0 13 39 1 13 40 10 13 41 5 14 42 6 14 43 13 14 44 14 15 45 11 15 46 12 15 47</p>
+        </triangles>
+      </mesh>
+    </geometry>
+  </library_geometries>
+  <library_visual_scenes>
+    <visual_scene id="Scene" name="Scene">
+      <node id="beam_1" name="beam_1" type="NODE">
+        <matrix sid="transform">1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</matrix>
+        <instance_geometry url="#beam_1-mesh" name="beam_1">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="concrete_1-material" target="#concrete_1-material">
+                <bind_vertex_input semantic="UVMap" input_semantic="TEXCOORD" input_set="0"/>
+              </instance_material>
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+      </node>
+    </visual_scene>
+  </library_visual_scenes>
+  <scene>
+    <instance_visual_scene url="#Scene"/>
+  </scene>
+</COLLADA>

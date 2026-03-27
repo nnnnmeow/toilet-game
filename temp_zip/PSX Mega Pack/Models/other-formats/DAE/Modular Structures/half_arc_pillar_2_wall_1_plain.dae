@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<COLLADA xmlns="http://www.collada.org/2005/11/COLLADASchema" version="1.4.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <asset>
+    <contributor>
+      <author>Blender User</author>
+      <authoring_tool>Blender 3.4.0 commit date:2022-12-06, commit time:18:46, hash:a95bf1ac01be</authoring_tool>
+    </contributor>
+    <created>2025-12-17T19:01:49</created>
+    <modified>2025-12-17T19:01:49</modified>
+    <unit name="meter" meter="1"/>
+    <up_axis>Z_UP</up_axis>
+  </asset>
+  <library_effects>
+    <effect id="wall_mp_1-effect">
+      <profile_COMMON>
+        <newparam sid="wall_mp_1_png-surface">
+          <surface type="2D">
+            <init_from>wall_mp_1_png</init_from>
+          </surface>
+        </newparam>
+        <newparam sid="wall_mp_1_png-sampler">
+          <sampler2D>
+            <source>wall_mp_1_png-surface</source>
+          </sampler2D>
+        </newparam>
+        <technique sid="common">
+          <lambert>
+            <emission>
+              <color sid="emission">0 0 0 1</color>
+            </emission>
+            <diffuse>
+              <texture texture="wall_mp_1_png-sampler" texcoord="UVMap"/>
+            </diffuse>
+            <index_of_refraction>
+              <float sid="ior">1.45</float>
+            </index_of_refraction>
+          </lambert>
+        </technique>
+      </profile_COMMON>
+    </effect>
+    <effect id="wood_painted_white-effect">
+      <profile_COMMON>
+        <newparam sid="wood_painted_white_mp_1_png-surface">
+          <surface type="2D">
+            <init_from>wood_painted_white_mp_1_png</init_from>
+          </surface>
+        </newparam>
+        <newparam sid="wood_painted_white_mp_1_png-sampler">
+          <sampler2D>
+            <source>wood_painted_white_mp_1_png-surface</source>
+          </sampler2D>
+        </newparam>
+        <technique sid="common">
+          <lambert>
+            <emission>
+              <color sid="emission">0 0 0 1</color>
+            </emission>
+            <diffuse>
+              <texture texture="wood_painted_white_mp_1_png-sampler" texcoord="UVMap"/>
+            </diffuse>
+            <index_of_refraction>
+              <float sid="ior">1.45</float>
+            </index_of_refraction>
+          </lambert>
+        </technique>
+      </profile_COMMON>
+    </effect>
+  </library_effects>
+  <library_images>
+    <image id="wall_mp_1_png" name="wall_mp_1_png">
+      <init_from>wall_mp_1.png</init_from>
+    </image>
+    <image id="wood_painted_white_mp_1_png" name="wood_painted_white_mp_1_png">
+      <init_from>wood_painted_white_mp_1.png</init_from>
+    </image>
+  </library_images>
+  <library_materials>
+    <material id="wall_mp_1-material" name="wall_mp_1">
+      <instance_effect url="#wall_mp_1-effect"/>
+    </material>
+    <material id="wood_painted_white-material" name="wood_painted_white">
+      <instance_effect url="#wood_painted_white-effect"/>
+    </material>
+  </library_materials>
+  <library_geometries>
+    <geometry id="half_arc_pillar_2_wall_1_plain-mesh" name="half_arc_pillar_2_wall_1_plain">
+      <mesh>
+        <source id="half_arc_pillar_2_wall_1_plain-mesh-positions">
+          <float_array id="half_arc_pillar_2_wall_1_plain-mesh-positions-array" count="108">-0.4000001 -0.1999987 0 -0.4000001 0.2000008 0 -1.5 -0.1999988 2.6 -0.3999999 -0.1999987 1.5 -1.215299 -0.1999988 2.562518 -0.9499999 -0.1999988 2.452628 -0.7221823 -0.1999987 2.277817 -0.5473719 -0.1999987 2.05 -0.4374814 -0.1999987 1.784701 -0.4000001 0.2000008 1.5 -0.4374814 0.2000008 1.784701 -0.547372 0.2000008 2.05 -0.7221824 0.2000008 2.277817 -0.9499999 0.2000008 2.452628 -1.215299 0.2000008 2.562518 -1.5 -0.1999987 3 -1.5 0.2000011 2.6 -1.5 0.2000012 3 0.4 0.1999988 0 0.4000001 -0.2000008 0 1.5 0.199999 2.6 0.3999998 0.1999988 1.5 1.215299 0.199999 2.562518 0.9499999 0.1999989 2.452628 0.7221822 0.1999989 2.277817 0.5473718 0.1999989 2.05 0.4374814 0.1999988 1.784701 0.4000001 -0.2000008 1.5 0.4374814 -0.2000007 1.784701 0.5473721 -0.2000007 2.05 0.7221825 -0.2000007 2.277817 0.95 -0.2000007 2.452628 1.215299 -0.2000006 2.562518 1.5 0.199999 3 1.5 -0.2000009 2.6 1.5 -0.200001 3</float_array>
+          <technique_common>
+            <accessor source="#half_arc_pillar_2_wall_1_plain-mesh-positions-array" count="36" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="half_arc_pillar_2_wall_1_plain-mesh-normals">
+          <float_array id="half_arc_pillar_2_wall_1_plain-mesh-normals-array" count="210">-2.52739e-6 -1 0 -2.4126e-6 -1 0 -2.5332e-6 -1 0 7.27125e-7 1 -4.7028e-7 6.98321e-7 1 0 7.30157e-7 1 0 0.8660254 6.0238e-7 -0.5000002 0.7071067 4.44414e-7 -0.7071068 0.7071068 3.65431e-7 -0.7071068 0.5000001 2.09832e-7 -0.8660254 0.2588186 0 -0.9659259 0.4999998 1.3085e-7 -0.8660256 -0.965926 -1.97457e-7 -0.2588186 -0.997859 -4.27495e-7 -0.06540274 -0.997859 -5.74134e-7 -0.06540292 2.4126e-6 1 0 2.11262e-6 1 4.23679e-7 2.26507e-6 1 -6.70339e-7 1 0 0 -6.98321e-7 -1 0 -7.27125e-7 -1 -4.14507e-7 -7.30157e-7 -1 0 -1 0 1.32576e-7 0.965926 3.93731e-7 -0.2588186 0.997859 5.92054e-7 -0.06540274 0.997859 7.22176e-7 -0.06540292 -0.7071064 -2.61699e-7 -0.7071073 -0.8660254 -2.61699e-7 -0.5000001 -0.8660254 -1.82716e-7 -0.5000001 7.23883e-7 1 -3.50686e-6 7.2955e-7 1 -6.86671e-6 -6.9947e-7 -1 -3.93229e-6 -6.95387e-7 -1 -2.34503e-7 -8.37837e-7 -1 -1.42498e-6 -7.5396e-7 -1 -3.71481e-6 1.51643e-6 1 8.60159e-7 1.18107e-6 1 -1.46711e-6 1.92263e-6 1 -1.15479e-6 -1.64234e-6 -1 -6.59605e-7 -1.18107e-6 -1 1.33504e-6 -1.33086e-6 -1 -1.45142e-6 7.79889e-7 1 -2.24759e-6 1.03045e-6 1 2.60908e-6 -9.72498e-7 -1 2.0356e-6 -2.11262e-6 -1 3.73778e-7 -2.26507e-6 -1 -6.70339e-7 -1.79672e-6 -1 1.18355e-6 0.965926 3.5424e-7 -0.2588186 0.8660256 3.65431e-7 -0.4999999 -0.2588186 0 -0.9659259 -0.1305256 0 -0.991445 -0.1305247 0 -0.9914451 -1 0 0 1 1.31849e-7 1.32576e-7 -0.4999996 0 -0.8660258 -0.7071069 -1.82716e-7 -0.7071067 -0.965926 0 -0.2588186 0.1305257 0 -0.991445 0.1305247 0 -0.9914451 2.52739e-6 1 0 2.5332e-6 1 0 -0.5000004 0 -0.8660252 -2.51457e-6 -1 2.40272e-7 6.95387e-7 1 -4.17902e-7 0.2588196 0 -0.9659257 2.51457e-6 1 1.87114e-7 -1 0 1.58946e-7 1.33086e-6 1 1.65113e-6 -0.2588188 0 -0.965926 1 0 1.58946e-7</float_array>
+          <technique_common>
+            <accessor source="#half_arc_pillar_2_wall_1_plain-mesh-normals-array" count="70" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="half_arc_pillar_2_wall_1_plain-mesh-map-0">
+          <float_array id="half_arc_pillar_2_wall_1_plain-mesh-map-0-array" count="384">0.3510753 0 0.1489247 0.4999999 0.1489247 0 0.6290322 0.8666667 -0.1290322 1 0.6290322 1 0.09433221 0.6851064 3.06543e-4 0.7461032 0.09433221 0.7461032 3.06543e-4 0.8351465 0.09433221 0.9135513 0.09433221 0.8351464 3.06586e-4 0.5960631 0.09433233 0.5012171 3.06586e-4 0.5012171 0.3510752 0.4999999 0.1394536 0.5949003 0.3605464 0.5949003 0.5225808 0.866667 0.623656 1 0.5225806 1 3.06543e-4 0.8351465 0.09433221 0.7461032 3.06543e-4 0.7461032 -0.1290322 1 0.6290322 0.8666667 0.6290322 1 0.09433233 3.06487e-4 3.06586e-4 0.5012171 0.09433233 0.5012171 3.06586e-4 0.5960631 0.09433233 0.5012171 3.06586e-4 0.5012171 3.06543e-4 0.7461032 0.09433221 0.6851064 3.06586e-4 0.6851063 -0.05709165 0.8541728 0.6290322 0.8666667 0.5570916 0.8541728 -0.05709165 0.8541728 0.6290322 0.8666667 -0.1290322 0.8666667 0.009946227 0.8175427 0.5570916 0.8541728 -0.05709165 0.8541728 0.1116855 0.6833333 0.4324869 0.7592725 0.3883144 0.6833333 0.1394536 0.5949003 0.3883144 0.6833333 0.3605464 0.5949003 0.1116856 0.6833333 0.432487 0.7592725 0.06751304 0.7592725 0.4900537 0.8175427 -0.05709165 0.8541728 0.5570916 0.8541728 0.4324869 0.7592725 0.009946227 0.8175427 0.4900537 0.8175427 0.009946227 0.8175427 0.432487 0.7592725 0.4900537 0.8175427 0.1489247 0.4999999 0.3605464 0.5949003 0.1394536 0.5949003 0.1116856 0.6833333 0.3605464 0.5949003 0.3883144 0.6833333 0.09433221 0.5960631 3.06586e-4 0.6851063 0.09433221 0.6851064 0.09433221 0.9135513 3.06543e-4 0.9998533 0.09433233 0.9998533 0.5225808 0.866667 0.623656 1 0.5225806 1 0.09433233 3.06487e-4 3.06586e-4 0.5012171 0.09433233 0.5012171 3.06543e-4 0.8351465 0.09433221 0.7461032 3.06543e-4 0.7461032 0.09433221 0.5960631 3.06586e-4 0.6851063 0.09433221 0.6851064 0.09433221 0.9135513 3.06543e-4 0.9998533 0.09433233 0.9998533 0.1489247 0 0.3510752 0.4999999 0.3510753 0 3.06543e-4 0.8351465 0.09433221 0.9135513 0.09433221 0.8351464 0.3510753 0 0.3510753 0.4999999 0.1489247 0.4999999 0.6290322 0.8666667 -0.1290322 0.8666667 -0.1290322 1 0.09433221 0.6851064 3.06586e-4 0.6851063 3.06543e-4 0.7461032 3.06543e-4 0.8351465 3.06543e-4 0.9135514 0.09433221 0.9135513 3.06586e-4 0.5960631 0.09433221 0.5960631 0.09433233 0.5012171 0.3510752 0.4999999 0.1489247 0.4999999 0.1394536 0.5949003 0.5225808 0.866667 0.623656 0.866667 0.623656 1 3.06543e-4 0.8351465 0.09433221 0.8351464 0.09433221 0.7461032 -0.1290322 1 -0.1290322 0.8666667 0.6290322 0.8666667 0.09433233 3.06487e-4 3.06673e-4 3.06487e-4 3.06586e-4 0.5012171 3.06586e-4 0.5960631 0.09433221 0.5960631 0.09433233 0.5012171 3.06543e-4 0.7461032 0.09433221 0.7461032 0.09433221 0.6851064 -0.05709165 0.8541728 -0.1290322 0.8666667 0.6290322 0.8666667 -0.05709165 0.8541728 0.5570916 0.8541728 0.6290322 0.8666667 0.009946227 0.8175427 0.4900537 0.8175427 0.5570916 0.8541728 0.1116855 0.6833333 0.06751304 0.7592725 0.4324869 0.7592725 0.1394536 0.5949003 0.1116855 0.6833333 0.3883144 0.6833333 0.1116856 0.6833333 0.3883144 0.6833333 0.432487 0.7592725 0.4900537 0.8175427 0.009946227 0.8175427 -0.05709165 0.8541728 0.4324869 0.7592725 0.06751304 0.7592725 0.009946227 0.8175427 0.009946227 0.8175427 0.06751304 0.7592725 0.432487 0.7592725 0.1489247 0.4999999 0.3510753 0.4999999 0.3605464 0.5949003 0.1116856 0.6833333 0.1394536 0.5949003 0.3605464 0.5949003 0.09433221 0.5960631 3.06586e-4 0.5960631 3.06586e-4 0.6851063 0.09433221 0.9135513 3.06543e-4 0.9135514 3.06543e-4 0.9998533 0.5225808 0.866667 0.623656 0.866667 0.623656 1 0.09433233 3.06487e-4 3.06673e-4 3.06487e-4 3.06586e-4 0.5012171 3.06543e-4 0.8351465 0.09433221 0.8351464 0.09433221 0.7461032 0.09433221 0.5960631 3.06586e-4 0.5960631 3.06586e-4 0.6851063 0.09433221 0.9135513 3.06543e-4 0.9135514 3.06543e-4 0.9998533 0.1489247 0 0.1489247 0.4999999 0.3510752 0.4999999 3.06543e-4 0.8351465 3.06543e-4 0.9135514 0.09433221 0.9135513</float_array>
+          <technique_common>
+            <accessor source="#half_arc_pillar_2_wall_1_plain-mesh-map-0-array" count="192" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="half_arc_pillar_2_wall_1_plain-mesh-vertices">
+          <input semantic="POSITION" source="#half_arc_pillar_2_wall_1_plain-mesh-positions"/>
+        </vertices>
+        <triangles material="wall_mp_1-material" count="64">
+          <input semantic="VERTEX" source="#half_arc_pillar_2_wall_1_plain-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#half_arc_pillar_2_wall_1_plain-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#half_arc_pillar_2_wall_1_plain-mesh-map-0" offset="2" set="0"/>
+          <p>19 0 0 3 1 1 0 2 2 20 3 3 17 4 4 33 5 5 29 6 6 24 7 7 30 8 8 23 9 9 32 10 10 31 11 11 8 12 12 9 13 13 3 14 14 21 15 15 10 16 16 26 17 17 34 18 18 33 18 19 35 18 20 23 9 21 30 8 22 24 7 23 15 19 24 34 20 25 35 21 26 1 22 27 3 14 28 9 13 29 26 23 30 27 24 31 21 25 32 6 26 33 11 27 34 7 28 35 14 29 36 20 3 37 22 30 38 4 31 39 34 20 40 2 32 41 5 33 42 32 34 43 4 31 44 11 35 45 24 36 46 25 37 47 10 16 48 25 37 49 26 17 50 7 38 51 30 39 52 6 40 53 23 41 54 14 29 55 22 30 56 24 36 57 13 42 58 23 41 59 5 33 60 30 39 61 31 43 62 3 1 63 28 44 64 8 45 65 7 38 66 28 44 67 29 46 68 28 47 69 25 48 70 29 6 71 14 49 72 2 50 73 16 51 74 16 52 75 15 52 76 17 52 77 19 53 78 21 25 79 27 24 80 5 54 81 12 55 82 6 26 83 10 56 84 7 28 85 11 27 86 32 10 87 20 57 88 34 58 89 1 59 90 21 15 91 18 60 92 5 54 93 14 49 94 13 61 95 19 0 96 27 62 97 3 1 98 20 3 99 16 63 100 17 4 101 29 6 102 25 48 103 24 7 104 23 9 105 22 64 106 32 10 107 8 12 108 10 56 109 9 13 110 21 15 111 9 65 112 10 16 113 34 18 114 20 18 115 33 18 116 23 9 117 31 11 118 30 8 119 15 19 120 2 32 121 34 20 122 1 22 123 0 66 124 3 14 125 26 23 126 28 47 127 27 24 128 6 26 129 12 55 130 11 27 131 14 29 132 16 63 133 20 3 134 4 31 135 32 34 136 34 20 137 5 33 138 31 43 139 32 34 140 11 35 141 12 67 142 24 36 143 10 16 144 11 35 145 25 37 146 7 38 147 29 46 148 30 39 149 23 41 150 13 42 151 14 29 152 24 36 153 12 67 154 13 42 155 5 33 156 6 40 157 30 39 158 3 1 159 27 62 160 28 44 161 7 38 162 8 45 163 28 44 164 28 47 165 26 23 166 25 48 167 14 49 168 4 68 169 2 50 170 16 52 171 2 52 172 15 52 173 19 53 174 18 69 175 21 25 176 5 54 177 13 61 178 12 55 179 10 56 180 8 12 181 7 28 182 32 10 183 22 64 184 20 57 185 1 59 186 9 65 187 21 15 188 5 54 189 4 68 190 14 49 191</p>
+        </triangles>
+      </mesh>
+    </geometry>
+  </library_geometries>
+  <library_visual_scenes>
+    <visual_scene id="Scene" name="Scene">
+      <node id="half_arc_pillar_2_wall_1_plain" name="half_arc_pillar_2_wall_1_plain" type="NODE">
+        <matrix sid="transform">1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</matrix>
+        <instance_geometry url="#half_arc_pillar_2_wall_1_plain-mesh" name="half_arc_pillar_2_wall_1_plain">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="wall_mp_1-material" target="#wall_mp_1-material">
+                <bind_vertex_input semantic="UVMap" input_semantic="TEXCOORD" input_set="0"/>
+              </instance_material>
+              <instance_material symbol="wood_painted_white-material" target="#wood_painted_white-material">
+                <bind_vertex_input semantic="UVMap" input_semantic="TEXCOORD" input_set="0"/>
+              </instance_material>
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+      </node>
+    </visual_scene>
+  </library_visual_scenes>
+  <scene>
+    <instance_visual_scene url="#Scene"/>
+  </scene>
+</COLLADA>

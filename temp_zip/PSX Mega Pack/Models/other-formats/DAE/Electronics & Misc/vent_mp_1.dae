@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<COLLADA xmlns="http://www.collada.org/2005/11/COLLADASchema" version="1.4.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <asset>
+    <contributor>
+      <author>Blender User</author>
+      <authoring_tool>Blender 3.4.0 commit date:2022-12-06, commit time:18:46, hash:a95bf1ac01be</authoring_tool>
+    </contributor>
+    <created>2025-12-17T19:09:25</created>
+    <modified>2025-12-17T19:09:25</modified>
+    <unit name="meter" meter="1"/>
+    <up_axis>Z_UP</up_axis>
+  </asset>
+  <library_effects>
+    <effect id="vents_mp_1-effect">
+      <profile_COMMON>
+        <newparam sid="vents_mp_1_png-surface">
+          <surface type="2D">
+            <init_from>vents_mp_1_png</init_from>
+          </surface>
+        </newparam>
+        <newparam sid="vents_mp_1_png-sampler">
+          <sampler2D>
+            <source>vents_mp_1_png-surface</source>
+          </sampler2D>
+        </newparam>
+        <technique sid="common">
+          <lambert>
+            <emission>
+              <color sid="emission">0 0 0 1</color>
+            </emission>
+            <diffuse>
+              <texture texture="vents_mp_1_png-sampler" texcoord="UVMap"/>
+            </diffuse>
+            <index_of_refraction>
+              <float sid="ior">1.45</float>
+            </index_of_refraction>
+          </lambert>
+        </technique>
+      </profile_COMMON>
+    </effect>
+  </library_effects>
+  <library_images>
+    <image id="vents_mp_1_png" name="vents_mp_1_png">
+      <init_from>vents_mp_1.png</init_from>
+    </image>
+  </library_images>
+  <library_materials>
+    <material id="vents_mp_1-material" name="vents_mp_1">
+      <instance_effect url="#vents_mp_1-effect"/>
+    </material>
+  </library_materials>
+  <library_geometries>
+    <geometry id="vent_mp_1-mesh" name="vent_mp_1">
+      <mesh>
+        <source id="vent_mp_1-mesh-positions">
+          <float_array id="vent_mp_1-mesh-positions-array" count="72">-0.1649956 9.64378e-7 -0.1000003 0.1650042 9.39419e-7 -0.1000003 -0.1649956 9.64577e-7 0.1000004 0.1650042 9.39617e-7 0.1000004 -0.1469957 -0.01399922 0.08200037 -0.1469957 -0.01399922 -0.08200037 0.1470042 -0.01399928 -0.08200037 0.1470043 -0.01399928 0.08200037 -0.1649956 -0.01399922 0.1000004 -0.1649956 -0.01399922 -0.1000003 0.1650042 -0.01399928 -0.1000003 0.1650042 -0.01399928 0.1000004 -0.1336537 -0.01899921 0.06743961 -0.1336537 -0.01899921 -0.06910908 0.1319513 -0.01899927 -0.06910908 0.1319514 -0.01899927 0.06743961 -0.1469957 -0.01899921 0.08200037 -0.1469957 -0.01899921 -0.08200031 0.1470042 -0.01899927 -0.08200031 0.1470043 -0.01899927 0.08200037 -0.1336537 -0.01399922 0.06743961 -0.1336537 -0.01399922 -0.06910908 0.1319513 -0.01399928 -0.06910908 0.1319514 -0.01399928 0.06743961</float_array>
+          <technique_common>
+            <accessor source="#vent_mp_1-mesh-positions-array" count="24" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="vent_mp_1-mesh-normals">
+          <float_array id="vent_mp_1-mesh-normals-array" count="120">0 0 1 0 0 -1 1 0 0 -1 0 0 0 -1.49012e-6 -1 0 -1 0 0 -1 0 -1.72257e-7 -1 0 0 -1 0 -1 -5.45635e-6 0 1 2.67137e-6 0 -1 -2.67121e-6 0 0 1.49012e-6 1 -1.39608e-7 -1 0 0 -1 2.45729e-7 -1.45713e-7 -1 0 0 -1 4.06372e-7 0 -1 0 1 2.91705e-6 0 0 -1.49012e-6 -1 0 1.49012e-6 1 0 0 1 0 0 -1 0 -1.49012e-6 -1 0 -1 0 0 -1 1.56788e-7 0 -1 0 0 -1 -1.56789e-7 -1 2.87989e-6 0 1 -4.54301e-6 0 -1 4.54301e-6 0 0 1.49012e-6 1 -1.39608e-7 -1 0 0 -1 -1.86999e-7 0 -1 0 0 -1 -4.3511e-7 0 -1 0 1 -5.45635e-6 0 0 -1.49011e-6 -1 0 1.49011e-6 1</float_array>
+          <technique_common>
+            <accessor source="#vent_mp_1-mesh-normals-array" count="40" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="vent_mp_1-mesh-map-0">
+          <float_array id="vent_mp_1-mesh-map-0-array" count="252">1 0.9298246 0 1 1 1 1 0.9298246 0 1 0 0.9298246 0.8105263 0.9298246 0.2105263 1 0.2105263 0.9298246 0.2105263 0.9298246 0.8105263 1 0.8105263 0.9298246 1 0.9859161 0.007923245 1.01416 0.007923245 0.985916 0.0545454 0.08999961 0 1 0 0 0.0545454 0.08999961 1 0 0.9454545 0.08999961 0.9454545 0.08999961 1 1 0.9454545 0.9100004 0.9454545 0.9100004 0 1 0.0545454 0.9100004 0.4791481 1.01416 0.9399198 0.9859162 0.4791481 0.9859161 0.9890539 0.9859163 0.4356477 1.01416 0.4356477 0.9859161 0.4356477 0.985916 0.9890539 1.01416 0.9890539 0.9859161 0.007923245 0.9859161 1 1.01416 1 0.9859163 0.09497565 0.837197 0.0545454 0.08999961 0.09497565 0.1544558 0.8998398 0.1544558 0.0545454 0.08999961 0.9454545 0.08999961 0.8998399 0.8371968 0.9454545 0.08999961 0.9454545 0.9100004 0.8998401 0.8371971 0.0545454 0.9100004 0.09497559 0.8371968 0.09497565 0.8371968 0.8998397 0.1544558 0.8998398 0.8371969 0.4791481 1.01416 0.9399198 0.9859161 0.9399198 1.01416 0.05294454 1.01416 0.9492056 0.9859162 0.9492056 1.01416 0.9492056 1.01416 0.05294454 0.985916 0.05294454 1.01416 1 0.9298246 0 0.9298246 0 1 1 0.9298246 1 1 0 1 0.8105263 0.9298246 0.8105263 1 0.2105263 1 0.2105263 0.9298246 0.2105263 1 0.8105263 1 1 0.9859161 1 1.01416 0.007923245 1.01416 0.0545454 0.08999961 0.0545454 0.9100004 0 1 0.0545454 0.08999961 0 0 1 0 0.9454545 0.08999961 1 0 1 1 0.9454545 0.9100004 1 1 0 1 0.4791481 1.01416 0.9399198 1.01416 0.9399198 0.9859162 0.9890539 0.9859163 0.9890539 1.01416 0.4356477 1.01416 0.4356477 0.985916 0.4356476 1.01416 0.9890539 1.01416 0.007923245 0.9859161 0.007923245 1.01416 1 1.01416 0.09497565 0.837197 0.0545454 0.9100004 0.0545454 0.08999961 0.8998398 0.1544558 0.09497565 0.1544558 0.0545454 0.08999961 0.8998399 0.8371968 0.8998397 0.1544557 0.9454545 0.08999961 0.8998401 0.8371971 0.9454545 0.9100004 0.0545454 0.9100004 0.09497565 0.8371968 0.09497565 0.1544558 0.8998397 0.1544558 0.4791481 1.01416 0.4791481 0.985916 0.9399198 0.9859161 0.05294454 1.01416 0.05294454 0.9859161 0.9492056 0.9859162 0.9492056 1.01416 0.9492056 0.9859161 0.05294454 0.985916</float_array>
+          <technique_common>
+            <accessor source="#vent_mp_1-mesh-map-0-array" count="126" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="vent_mp_1-mesh-vertices">
+          <input semantic="POSITION" source="#vent_mp_1-mesh-positions"/>
+        </vertices>
+        <triangles material="vents_mp_1-material" count="42">
+          <input semantic="VERTEX" source="#vent_mp_1-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#vent_mp_1-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#vent_mp_1-mesh-map-0" offset="2" set="0"/>
+          <p>3 0 0 8 0 1 11 0 2 1 1 3 9 1 4 0 1 5 3 2 6 10 2 7 1 2 8 0 3 9 8 3 10 2 3 11 6 4 12 17 4 13 5 4 14 5 5 15 8 5 16 9 5 17 5 6 18 10 6 19 6 6 20 6 7 21 11 7 22 7 7 23 7 8 24 8 8 25 4 8 26 14 9 27 23 9 28 22 9 29 7 10 30 18 10 31 6 10 32 5 11 33 16 11 34 4 11 35 4 12 36 19 12 37 7 12 38 12 13 39 17 13 40 13 13 41 14 14 42 17 14 43 18 14 44 15 15 45 18 15 46 19 15 47 15 16 48 16 16 49 12 16 50 20 17 51 22 17 52 23 17 53 13 18 54 20 18 55 12 18 56 12 19 57 23 19 58 15 19 59 14 20 60 21 20 61 13 20 62 3 21 63 2 21 64 8 21 65 1 22 66 10 22 67 9 22 68 3 2 69 11 2 70 10 2 71 0 3 72 9 3 73 8 3 74 6 23 75 18 23 76 17 23 77 5 24 78 4 24 79 8 24 80 5 25 81 9 25 82 10 25 83 6 26 84 10 26 85 11 26 86 7 27 87 11 27 88 8 27 89 14 28 90 15 28 91 23 28 92 7 29 93 19 29 94 18 29 95 5 30 96 17 30 97 16 30 98 4 31 99 16 31 100 19 31 101 12 32 102 16 32 103 17 32 104 14 33 105 13 33 106 17 33 107 15 34 108 14 34 109 18 34 110 15 35 111 19 35 112 16 35 113 20 36 114 21 36 115 22 36 116 13 37 117 21 37 118 20 37 119 12 38 120 20 38 121 23 38 122 14 39 123 22 39 124 21 39 125</p>
+        </triangles>
+      </mesh>
+    </geometry>
+  </library_geometries>
+  <library_visual_scenes>
+    <visual_scene id="Scene" name="Scene">
+      <node id="vent_mp_1" name="vent_mp_1" type="NODE">
+        <matrix sid="transform">1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</matrix>
+        <instance_geometry url="#vent_mp_1-mesh" name="vent_mp_1">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="vents_mp_1-material" target="#vents_mp_1-material">
+                <bind_vertex_input semantic="UVMap" input_semantic="TEXCOORD" input_set="0"/>
+              </instance_material>
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+      </node>
+    </visual_scene>
+  </library_visual_scenes>
+  <scene>
+    <instance_visual_scene url="#Scene"/>
+  </scene>
+</COLLADA>

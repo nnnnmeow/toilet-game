@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<COLLADA xmlns="http://www.collada.org/2005/11/COLLADASchema" version="1.4.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <asset>
+    <contributor>
+      <author>Blender User</author>
+      <authoring_tool>Blender 3.4.0 commit date:2022-12-06, commit time:18:46, hash:a95bf1ac01be</authoring_tool>
+    </contributor>
+    <created>2025-12-17T19:04:22</created>
+    <modified>2025-12-17T19:04:22</modified>
+    <unit name="meter" meter="1"/>
+    <up_axis>Z_UP</up_axis>
+  </asset>
+  <library_effects>
+    <effect id="floppy_disc_1-effect">
+      <profile_COMMON>
+        <newparam sid="floppy_disc_1_png_001-surface">
+          <surface type="2D">
+            <init_from>floppy_disc_1_png_001</init_from>
+          </surface>
+        </newparam>
+        <newparam sid="floppy_disc_1_png_001-sampler">
+          <sampler2D>
+            <source>floppy_disc_1_png_001-surface</source>
+          </sampler2D>
+        </newparam>
+        <technique sid="common">
+          <lambert>
+            <emission>
+              <color sid="emission">0 0 0 1</color>
+            </emission>
+            <diffuse>
+              <texture texture="floppy_disc_1_png_001-sampler" texcoord="UVMap"/>
+            </diffuse>
+            <index_of_refraction>
+              <float sid="ior">1.45</float>
+            </index_of_refraction>
+          </lambert>
+        </technique>
+      </profile_COMMON>
+    </effect>
+  </library_effects>
+  <library_images>
+    <image id="floppy_disc_1_png_001" name="floppy_disc_1_png_001">
+      <init_from>floppy_disc_1.png.001.png</init_from>
+    </image>
+  </library_images>
+  <library_materials>
+    <material id="floppy_disc_1-material" name="floppy_disc_1">
+      <instance_effect url="#floppy_disc_1-effect"/>
+    </material>
+  </library_materials>
+  <library_geometries>
+    <geometry id="floppy_disc_1-mesh" name="floppy_disc_1">
+      <mesh>
+        <source id="floppy_disc_1-mesh-positions">
+          <float_array id="floppy_disc_1-mesh-positions-array" count="84">0.06904876 0.07919996 0.001799941 0.07919996 0.0690487 0.001799941 0.06904876 0.07919996 0.008999943 0.07919996 0.0690487 0.008999943 -0.07559996 -0.07919996 0.001799941 -0.07919996 -0.07559996 0.001799941 -0.07919996 0.07559996 0.001799941 -0.07559996 0.07919996 0.001799941 0.07919996 -0.07559996 0.001799941 0.07559996 -0.07919996 0.001799941 -0.07919996 -0.07559996 0.008999943 -0.07559996 -0.07919996 0.008999943 -0.07559996 0.07919996 0.008999943 -0.07919996 0.07559996 0.008999943 0.07559996 -0.07919996 0.008999943 0.07919996 -0.07559996 0.008999943 -0.04248416 0.03148585 0.01079994 -0.03667443 0.0263217 0.01079994 0.04250937 0.0263217 0.01079994 0.04767358 0.0319162 0.01079994 -0.0424813 0.03148585 0 -0.03667068 0.02632176 0 0.04251021 0.02632176 0 0.0476762 0.0319162 0 -0.0424841 0.08099997 0.01079994 0.04767382 0.08099997 0.01079994 -0.04261463 0.08099997 0 0.04763042 0.08099997 0</float_array>
+          <technique_common>
+            <accessor source="#floppy_disc_1-mesh-positions-array" count="28" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="floppy_disc_1-mesh-normals">
+          <float_array id="floppy_disc_1-mesh-normals-array" count="96">0 0 -1 0 -1 -5.44515e-6 -0.664364 -0.7474091 -1.74034e-4 0 0 -1 0.999992 -4.39213e-6 -0.004014313 0.7348028 -0.6782809 5.13218e-5 0 0 1 0 1 0 -0.9999234 -0.002693057 0.01208794 0 0 -1 0 0 -1 0.7071064 0.7071072 0 0.7071071 -0.7071065 0 -1 0 0 -0.7071071 -0.7071065 0 1 0 0 0 -1 0 0 0 -1 -0.7071071 0.7071065 0 0 0 -1 0 -1 -4.91825e-6 -0.6643021 -0.7474642 -2.3388e-4 0.9999995 9.32236e-4 2.4145e-4 0.7346783 -0.6784157 1.80267e-4 0 1 -2.46404e-6 -1 1.3062e-6 -2.63185e-4 0 0 -1 0.7071076 0.7071061 0 0.7071071 -0.7071065 0 -0.7071071 -0.7071065 0 0 0 1 -0.7071071 0.7071065 0</float_array>
+          <technique_common>
+            <accessor source="#floppy_disc_1-mesh-normals-array" count="32" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="floppy_disc_1-mesh-map-0">
+          <float_array id="floppy_disc_1-mesh-map-0-array" count="288">0.8585421 0.6551474 0.6092401 0.6903035 0.624418 0.6551465 0.3759214 0.6562626 0.6341837 0.6586874 0.375 0.65625 0.3661176 0.6915374 0.375 0.65625 0.3658959 0.6909231 0.875 1 0.6092401 0.6903035 0.8751226 0.6865241 0.65625 0.71875 0.6559639 1 0.6561008 1 0.633602 0.6598641 0.65625 0.71875 0.6341837 0.6586874 0.390625 0.6875 0.125 1 0.125 0.6875 0.390625 0.6875 0.140625 0.65625 0.375 0.65625 0.140625 0.3125 0.40625 0.25 0.140625 0.25 0.3660255 0.6909238 0.3658961 1 0.3654838 1 0 0.966292 0.467957 0.988764 0.01136362 0.988764 0.5 0.9253981 1 0.0224719 0.532043 0.988764 1 0.966292 0.532043 0.988764 1 0.0224719 0.9689285 0.2536277 0.5123353 0.2990822 0.9689285 0.2990822 0.8769432 0.2536277 0.812857 0.2990822 0.8769432 0.2990822 0.9896079 0.2536277 1.000972 0.2990822 0.9896079 0.2990822 0.5217742 0.2990822 0.9990469 0.2536277 0.5217742 0.2536277 0.5123353 0.2990822 0.5009716 0.2536277 0.5123353 0.2536277 0.01136362 0 0.467957 0.988764 0 0.02247196 0.5217742 0.2990822 0.9783675 0.2536277 0.9783675 0.2990822 0.9896079 0.2990822 0.5123353 0.2536277 0.9896079 0.2536277 0.4886364 0 0.5 0.9253981 0.01136362 0 0.5113637 0 0.5 0.9253981 0.5 0.0224719 0.5009716 0.2990822 0.5123353 0.2536277 0.5009716 0.2536277 0.8585421 0.6551474 0.8751226 0.6865241 0.6092401 0.6903035 0.3759214 0.6562626 0.6342093 0.6597838 0.6341837 0.6586874 0.3661176 0.6915374 0.3753837 0.6547566 0.375 0.65625 0.875 1 0.609375 1 0.6092401 0.6903035 0.65625 0.71875 0.6562474 0.7212729 0.6559639 1 0.633602 0.6598641 0.6572929 0.7215213 0.65625 0.71875 0.390625 0.6875 0.390625 1 0.125 1 0.390625 0.6875 0.125 0.6875 0.140625 0.65625 0.140625 0.3125 0.40625 0.3125 0.40625 0.25 0.3660255 0.6909238 0.3658959 0.6909231 0.3658961 1 0 0.966292 0 0.02247196 0.467957 0.988764 0.5 0.9253981 0.9886364 0 1 0.0224719 1 0.966292 0.9886364 0.9887639 0.532043 0.988764 0.9689285 0.2536277 0.5123353 0.2536277 0.5123353 0.2990822 0.8769432 0.2536277 0.812857 0.2536277 0.812857 0.2990822 0.9896079 0.2536277 1.000972 0.2536277 1.000972 0.2990822 0.5217742 0.2990822 0.9990469 0.2990822 0.9990469 0.2536277 0.5123353 0.2990822 0.5009716 0.2990822 0.5009716 0.2536277 0.01136362 0 0.5 0.9253981 0.467957 0.988764 0.5217742 0.2990822 0.5217742 0.2536277 0.9783675 0.2536277 0.9896079 0.2990822 0.5123353 0.2990822 0.5123353 0.2536277 0.4886364 0 0.5 0.0224719 0.5 0.9253981 0.5113637 0 0.9886364 0 0.5 0.9253981 0.5009716 0.2990822 0.5123353 0.2990822 0.5123353 0.2536277</float_array>
+          <technique_common>
+            <accessor source="#floppy_disc_1-mesh-map-0-array" count="144" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="floppy_disc_1-mesh-vertices">
+          <input semantic="POSITION" source="#floppy_disc_1-mesh-positions"/>
+        </vertices>
+        <triangles material="floppy_disc_1-material" count="48">
+          <input semantic="VERTEX" source="#floppy_disc_1-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#floppy_disc_1-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#floppy_disc_1-mesh-map-0" offset="2" set="0"/>
+          <p>21 0 0 23 0 1 22 0 2 21 1 3 18 1 4 17 1 5 20 2 6 17 2 7 16 2 8 26 3 9 23 3 10 20 3 11 19 4 12 27 4 13 25 4 14 22 5 15 19 5 16 18 5 17 19 6 18 24 6 19 16 6 20 19 6 21 17 6 22 18 6 23 24 7 24 27 7 25 26 7 26 20 8 27 24 8 28 26 8 29 13 6 30 2 6 31 12 6 32 1 9 33 5 9 34 0 9 35 6 10 36 0 10 37 5 10 38 0 7 39 12 7 40 2 7 41 1 11 42 2 11 43 3 11 44 9 12 45 15 12 46 14 12 47 10 13 48 6 13 49 5 13 50 11 14 51 5 14 52 4 14 53 11 6 54 2 6 55 10 6 56 15 15 57 1 15 58 3 15 59 14 16 60 4 16 61 9 16 62 14 6 63 3 6 64 11 6 65 9 17 66 1 17 67 8 17 68 13 18 69 7 18 70 6 18 71 21 19 72 20 19 73 23 19 74 21 20 75 22 20 76 18 20 77 20 21 78 21 21 79 17 21 80 26 17 81 27 17 82 23 17 83 19 22 84 23 22 85 27 22 86 22 23 87 23 23 88 19 23 89 19 6 90 25 6 91 24 6 92 19 6 93 16 6 94 17 6 95 24 24 96 25 24 97 27 24 98 20 25 99 16 25 100 24 25 101 13 6 102 10 6 103 2 6 104 1 26 105 4 26 106 5 26 107 6 17 108 7 17 109 0 17 110 0 7 111 7 7 112 12 7 113 1 27 114 0 27 115 2 27 116 9 28 117 8 28 118 15 28 119 10 13 120 13 13 121 6 13 122 11 29 123 10 29 124 5 29 125 11 30 126 3 30 127 2 30 128 15 15 129 8 15 130 1 15 131 14 16 132 11 16 133 4 16 134 14 6 135 15 6 136 3 6 137 9 17 138 4 17 139 1 17 140 13 31 141 12 31 142 7 31 143</p>
+        </triangles>
+      </mesh>
+    </geometry>
+  </library_geometries>
+  <library_visual_scenes>
+    <visual_scene id="Scene" name="Scene">
+      <node id="floppy_disc_1" name="floppy_disc_1" type="NODE">
+        <matrix sid="transform">1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</matrix>
+        <instance_geometry url="#floppy_disc_1-mesh" name="floppy_disc_1">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="floppy_disc_1-material" target="#floppy_disc_1-material">
+                <bind_vertex_input semantic="UVMap" input_semantic="TEXCOORD" input_set="0"/>
+              </instance_material>
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+      </node>
+    </visual_scene>
+  </library_visual_scenes>
+  <scene>
+    <instance_visual_scene url="#Scene"/>
+  </scene>
+</COLLADA>

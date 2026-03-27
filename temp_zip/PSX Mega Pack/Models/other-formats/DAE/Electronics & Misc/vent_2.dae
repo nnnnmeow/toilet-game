@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<COLLADA xmlns="http://www.collada.org/2005/11/COLLADASchema" version="1.4.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <asset>
+    <contributor>
+      <author>Blender User</author>
+      <authoring_tool>Blender 3.4.0 commit date:2022-12-06, commit time:18:46, hash:a95bf1ac01be</authoring_tool>
+    </contributor>
+    <created>2025-12-17T19:09:25</created>
+    <modified>2025-12-17T19:09:25</modified>
+    <unit name="meter" meter="1"/>
+    <up_axis>Z_UP</up_axis>
+  </asset>
+  <library_effects>
+    <effect id="vent_2-effect">
+      <profile_COMMON>
+        <newparam sid="vent_2_png-surface">
+          <surface type="2D">
+            <init_from>vent_2_png</init_from>
+          </surface>
+        </newparam>
+        <newparam sid="vent_2_png-sampler">
+          <sampler2D>
+            <source>vent_2_png-surface</source>
+          </sampler2D>
+        </newparam>
+        <technique sid="common">
+          <lambert>
+            <emission>
+              <color sid="emission">0 0 0 1</color>
+            </emission>
+            <diffuse>
+              <texture texture="vent_2_png-sampler" texcoord="UVMap"/>
+            </diffuse>
+            <index_of_refraction>
+              <float sid="ior">1.45</float>
+            </index_of_refraction>
+          </lambert>
+        </technique>
+      </profile_COMMON>
+    </effect>
+  </library_effects>
+  <library_images>
+    <image id="vent_2_png" name="vent_2_png">
+      <init_from>vent_2.png</init_from>
+    </image>
+  </library_images>
+  <library_materials>
+    <material id="vent_2-material" name="vent_2">
+      <instance_effect url="#vent_2-effect"/>
+    </material>
+  </library_materials>
+  <library_geometries>
+    <geometry id="vent_2-mesh" name="vent_2">
+      <mesh>
+        <source id="vent_2-mesh-positions">
+          <float_array id="vent_2-mesh-positions-array" count="72">-0.4095891 0 -0.4 0.4095891 0 -0.4 -0.4095891 0 0.4 0.4095891 0 0.4 -0.3463891 -0.03999996 0.3367096 -0.3463891 -0.03999996 -0.339668 0.3463891 -0.03999996 -0.339668 0.3463891 -0.03999996 0.3367096 -0.4095891 0 0.4 -0.4095888 -0.01499998 0.3999999 -0.4095891 0 -0.4 -0.4095888 -0.01499998 -0.4 0.4095891 0 -0.4 0.4095888 -0.01499998 -0.4 0.4095891 0 0.4 0.4095888 -0.01499998 0.3999999 -0.326389 -0.02999997 0.3167096 -0.3463891 -0.00999999 0.3367096 -0.3463891 -0.00999993 -0.339668 -0.326389 -0.02999997 -0.3196681 0.3463891 -0.00999993 -0.339668 0.326389 -0.02999997 -0.3196681 0.3463891 -0.00999999 0.3367096 0.326389 -0.02999997 0.3167096</float_array>
+          <technique_common>
+            <accessor source="#vent_2-mesh-positions-array" count="24" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="vent_2-mesh-normals">
+          <float_array id="vent_2-mesh-normals-array" count="81">0 0 1 0 0 -1 -1 0 0 1 0 0 -1 -1.57993e-5 0 -0.3678378 -0.92989 0 0 -0.9238271 -0.3828101 1 -1.98682e-5 0 0.3678379 -0.9298899 0 0 -3.97364e-6 1 0 -0.93007 0.3673825 -0.7071063 -0.7071073 0 0 -0.7071069 -0.7071067 0.7071063 -0.7071073 0 0 -0.707107 0.7071067 0 -1 0 -1 -1.98682e-5 0 -0.3678375 -0.9298902 0 0 -0.9238271 -0.3828102 1 -1.57993e-5 0 0.3678376 -0.9298901 0 0 -0.93007 0.3673824 -0.7071066 -0.707107 0 0 -0.707107 -0.7071066 0.7071066 -0.707107 0 0 -0.7071072 0.7071065 0 -1 0</float_array>
+          <technique_common>
+            <accessor source="#vent_2-mesh-normals-array" count="27" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="vent_2-mesh-map-0">
+          <float_array id="vent_2-mesh-map-0-array" count="252">0 0 0 1 0 1 0 1 1 1 1 1 1 0 0 0 0 0 1 1 1 0 1 0 0.9228498 0.518311 0.07715022 0.4816889 0.07715022 0.518311 0.07715022 0.518311 0.9228498 0.4816889 0.9228498 0.518311 0.9110338 0.518311 0.0853548 0.4816889 0.0853548 0.518311 0.0853548 0.518311 0.9110338 0.4816889 0.9110338 0.518311 0 0 0.006694078 0.9978137 0 1 0 0 0.07715022 0.9208871 0 1 1 0 0.001487553 0 0 0 0.9228498 0.07541489 0 0 1 0 1 0 0.9935809 0.9979175 0.9933078 -0.00341475 0.9228498 0.9208871 1 0 1 1 0 1 0.9985693 0.9934245 1 1 0.07715022 0.9208871 1 1 0 1 0.09790205 0.09790205 0.07692307 0.9230769 0.07692307 0.07692307 0.9020979 0.09790205 0.07692307 0.07692307 0.9230769 0.07692307 0.9020979 0.9020979 0.9230769 0.07692307 0.9230769 0.9230769 0.09790205 0.9020979 0.9230769 0.9230769 0.07692307 0.9230769 0.9020979 0.09790205 0.09790205 0.9020979 0.09790205 0.09790205 0 0 0 0 0 1 0 1 0 1 1 1 1 0 1 0 0 0 1 1 1 1 1 0 0.9228498 0.518311 0.9228498 0.4816889 0.07715022 0.4816889 0.07715022 0.518311 0.07715022 0.4816889 0.9228498 0.4816889 0.9110338 0.518311 0.9110338 0.4816889 0.0853548 0.4816889 0.0853548 0.518311 0.0853548 0.4816889 0.9110338 0.4816889 0 0 0.00641787 -0.003289163 0.006694078 0.9978137 0 0 0.07715022 0.07541489 0.07715022 0.9208871 1 0 0.9985445 0 0.001487553 0 0.9228498 0.07541489 0.07715022 0.07541489 0 0 1 0 1 1 0.9935809 0.9979175 0.9228498 0.9208871 0.9228498 0.07541489 1 0 0 1 0.001484692 0.9932227 0.9985693 0.9934245 0.07715022 0.9208871 0.9228498 0.9208871 1 1 0.09790205 0.09790205 0.09790205 0.9020979 0.07692307 0.9230769 0.9020979 0.09790205 0.09790205 0.09790205 0.07692307 0.07692307 0.9020979 0.9020979 0.9020979 0.09790205 0.9230769 0.07692307 0.09790205 0.9020979 0.9020979 0.9020979 0.9230769 0.9230769 0.9020979 0.09790205 0.9020979 0.9020979 0.09790205 0.9020979</float_array>
+          <technique_common>
+            <accessor source="#vent_2-mesh-map-0-array" count="126" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="vent_2-mesh-vertices">
+          <input semantic="POSITION" source="#vent_2-mesh-positions"/>
+        </vertices>
+        <triangles material="vent_2-material" count="42">
+          <input semantic="VERTEX" source="#vent_2-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#vent_2-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#vent_2-mesh-map-0" offset="2" set="0"/>
+          <p>0 0 0 8 0 1 2 0 2 2 0 3 14 0 4 3 0 5 1 0 6 10 0 7 0 0 8 3 0 9 12 0 10 1 0 11 6 0 12 18 0 13 5 0 14 4 1 15 22 1 16 7 1 17 7 2 18 20 2 19 6 2 20 5 3 21 17 3 22 4 3 23 10 4 24 9 4 25 8 4 26 11 5 27 4 5 28 9 5 29 12 1 30 11 1 31 10 1 32 6 6 33 11 6 34 13 6 35 12 7 36 15 7 37 13 7 38 7 8 39 13 8 40 15 8 41 8 9 42 15 9 43 14 9 44 4 10 45 15 10 46 9 10 47 19 11 48 17 11 49 18 11 50 21 12 51 18 12 52 20 12 53 23 13 54 20 13 55 22 13 56 16 14 57 22 14 58 17 14 59 21 15 60 16 15 61 19 15 62 0 0 63 10 0 64 8 0 65 2 0 66 8 0 67 14 0 68 1 0 69 12 0 70 10 0 71 3 0 72 14 0 73 12 0 74 6 0 75 20 0 76 18 0 77 4 1 78 17 1 79 22 1 80 7 2 81 22 2 82 20 2 83 5 3 84 18 3 85 17 3 86 10 16 87 11 16 88 9 16 89 11 17 90 5 17 91 4 17 92 12 1 93 13 1 94 11 1 95 6 18 96 5 18 97 11 18 98 12 19 99 14 19 100 15 19 101 7 20 102 6 20 103 13 20 104 8 9 105 9 9 106 15 9 107 4 21 108 7 21 109 15 21 110 19 22 111 16 22 112 17 22 113 21 23 114 19 23 115 18 23 116 23 24 117 21 24 118 20 24 119 16 25 120 23 25 121 22 25 122 21 26 123 23 26 124 16 26 125</p>
+        </triangles>
+      </mesh>
+    </geometry>
+  </library_geometries>
+  <library_visual_scenes>
+    <visual_scene id="Scene" name="Scene">
+      <node id="vent_2" name="vent_2" type="NODE">
+        <matrix sid="transform">1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</matrix>
+        <instance_geometry url="#vent_2-mesh" name="vent_2">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="vent_2-material" target="#vent_2-material">
+                <bind_vertex_input semantic="UVMap" input_semantic="TEXCOORD" input_set="0"/>
+              </instance_material>
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+      </node>
+    </visual_scene>
+  </library_visual_scenes>
+  <scene>
+    <instance_visual_scene url="#Scene"/>
+  </scene>
+</COLLADA>

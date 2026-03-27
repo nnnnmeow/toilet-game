@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<COLLADA xmlns="http://www.collada.org/2005/11/COLLADASchema" version="1.4.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <asset>
+    <contributor>
+      <author>Blender User</author>
+      <authoring_tool>Blender 3.4.0 commit date:2022-12-06, commit time:18:46, hash:a95bf1ac01be</authoring_tool>
+    </contributor>
+    <created>2025-12-17T19:01:47</created>
+    <modified>2025-12-17T19:01:47</modified>
+    <unit name="meter" meter="1"/>
+    <up_axis>Z_UP</up_axis>
+  </asset>
+  <library_effects>
+    <effect id="wall_mp_1-effect">
+      <profile_COMMON>
+        <newparam sid="wall_mp_1_png-surface">
+          <surface type="2D">
+            <init_from>wall_mp_1_png</init_from>
+          </surface>
+        </newparam>
+        <newparam sid="wall_mp_1_png-sampler">
+          <sampler2D>
+            <source>wall_mp_1_png-surface</source>
+          </sampler2D>
+        </newparam>
+        <technique sid="common">
+          <lambert>
+            <emission>
+              <color sid="emission">0 0 0 1</color>
+            </emission>
+            <diffuse>
+              <texture texture="wall_mp_1_png-sampler" texcoord="UVMap"/>
+            </diffuse>
+            <index_of_refraction>
+              <float sid="ior">1.45</float>
+            </index_of_refraction>
+          </lambert>
+        </technique>
+      </profile_COMMON>
+    </effect>
+  </library_effects>
+  <library_images>
+    <image id="wall_mp_1_png" name="wall_mp_1_png">
+      <init_from>wall_mp_1.png</init_from>
+    </image>
+  </library_images>
+  <library_materials>
+    <material id="wall_mp_1-material" name="wall_mp_1">
+      <instance_effect url="#wall_mp_1-effect"/>
+    </material>
+  </library_materials>
+  <library_geometries>
+    <geometry id="wall_1_rounded_corner-mesh" name="wall_1_rounded_corner">
+      <mesh>
+        <source id="wall_1_rounded_corner-mesh-positions">
+          <float_array id="wall_1_rounded_corner-mesh-positions-array" count="156">0 1.94 0 0 1.94 3 0 2.06 0 0 2.06 3 -2 2.06 0 -2 2.059999 3 -2 1.939999 0 -2 1.94 3 -2.03 2.03 0 -2.03 2.029999 3 -2.03 1.969999 0 -2.03 1.97 3 0.3784752 1.902723 0 0.3784753 1.902723 3 0.4018861 2.020418 0 0.4018861 2.020417 3 0.7424057 1.792326 0 0.7424059 1.792326 3 0.7883279 1.903192 0 0.7883279 1.903192 3 1.077806 1.613051 0 1.077806 1.613051 3 1.144475 1.712827 0 1.144475 1.712827 3 1.371787 1.371787 0 1.371787 1.371787 3 1.45664 1.45664 0 1.45664 1.45664 3 1.613051 1.077806 0 1.613051 1.077806 3 1.712827 1.144474 0 1.712827 1.144474 3 1.792326 0.7424055 0 1.792326 0.7424055 3 1.903192 0.7883277 0 1.903192 0.7883273 3 1.902723 0.378475 0 1.902723 0.3784748 3 2.020418 0.4018858 0 2.020418 0.4018854 3 1.94 -2.38419e-7 0 1.94 -3.69553e-7 3 2.06 -2.38419e-7 0 2.06 -8.4639e-7 3 2.06 -2.000001 3 1.94 -2 0 1.94 -2 3 2.06 -2 0 1.97 -2.03 0 1.97 -2.03 3 2.03 -2.03 0 2.03 -2.03 3</float_array>
+          <technique_common>
+            <accessor source="#wall_1_rounded_corner-mesh-positions-array" count="52" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="wall_1_rounded_corner-mesh-normals">
+          <float_array id="wall_1_rounded_corner-mesh-normals-array" count="165">-2.38419e-7 1 1.58946e-7 0.04906773 0.9987955 0 0.04906773 0.9987955 2.27345e-7 -0.7071022 -0.7071114 0 -0.7071095 -0.7071041 0 -0.7071096 -0.707104 0 -0.7071022 0.7071114 2.32041e-7 -0.7071095 0.7071041 0 -0.7071096 0.707104 0 -0.04906761 -0.9987956 0 2.38419e-7 -1 0 2.38419e-7 -1 0 -0.1950907 -0.9807853 0 -0.04906779 -0.9987955 0 0.1950907 0.9807853 2.34553e-7 -0.1950905 -0.9807853 0 -0.3826838 -0.9238795 0 0.1950904 0.9807853 0 0.3826836 0.9238795 0 -0.3826837 -0.9238795 0 -0.5555705 -0.8314695 0 0.3826834 0.9238796 0 0.5555704 0.8314696 0 -0.5555704 -0.8314695 0 -0.7071068 -0.7071068 0 0.5555705 0.8314694 0 0.7071069 0.7071067 0 -0.707107 -0.7071066 0 -0.8314694 -0.5555706 0 0.707107 0.7071066 0 0.8314697 0.5555703 0 -0.8314697 -0.5555701 0 -0.9238796 -0.3826835 0 0.8314697 0.5555702 0 0.9238796 0.3826833 0 0.9238795 0.3826835 0 0.9807854 0.19509 0 -0.9238796 -0.3826833 0 -0.9807854 -0.1950902 0 0.9807853 0.1950903 0 0.9987956 0.04906761 0 -0.9807854 -0.1950902 0 -0.9987955 -0.04906773 0 0.9987956 0.04906755 0 1 0 0 -1 -1.23575e-7 0 -1 -1.58946e-7 0 0.7071059 -0.7071078 -2.34149e-7 -0.7071021 -0.7071115 0 -2.38419e-7 1 1.58946e-7 -0.7071021 0.7071115 2.34148e-7 -0.9987955 -0.04906773 0 1 0 1.58946e-7 0.7070956 -0.707118 0 -0.7071096 -0.707104 0</float_array>
+          <technique_common>
+            <accessor source="#wall_1_rounded_corner-mesh-normals-array" count="55" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="wall_1_rounded_corner-mesh-map-0">
+          <float_array id="wall_1_rounded_corner-mesh-map-0-array" count="288">1.413547 1.54972e-6 0.9081718 0.9999992 0.908172 1.43051e-6 -0.1725254 1 -0.1627596 0 -0.1725251 0 1.172528 0 1.162762 1 1.172526 1 0.1156052 1.3113e-6 -0.3897702 0.9999988 -0.3897697 8.34465e-7 0.1156052 1.3113e-6 0.2117037 0.9999991 0.1156049 0.999999 0.9081718 0.9999992 0.8061292 1.3113e-6 0.908172 1.43051e-6 0.211704 1.19209e-6 0.3078025 0.9999989 0.2117037 0.9999991 0.8061287 0.9999991 0.7040861 1.3113e-6 0.8061292 1.3113e-6 0.3078027 1.19209e-6 0.4039011 0.999999 0.3078025 0.9999989 0.704086 0.9999988 0.602043 1.3113e-6 0.7040861 1.3113e-6 0.4039013 1.19209e-6 0.4999998 0.9999988 0.4039011 0.999999 0.602043 0.999999 0.5 1.3113e-6 0.602043 1.3113e-6 0.5 1.19209e-6 0.5960986 0.9999988 0.4999998 0.9999988 0.4999998 0.9999989 0.3979572 1.19209e-6 0.5 1.3113e-6 0.5960989 1.3113e-6 0.6921973 0.9999989 0.5960986 0.9999988 0.397957 0.9999988 0.2959141 1.01328e-6 0.3979572 1.19209e-6 0.2959139 0.9999986 0.1938712 1.01328e-6 0.2959141 1.01328e-6 0.6921975 1.01328e-6 0.7882962 0.9999988 0.6921973 0.9999989 0.1938712 0.9999986 0.09182834 8.34465e-7 0.1938712 1.01328e-6 0.7882962 1.01328e-6 0.8843948 0.9999987 0.7882962 0.9999988 0.09182786 0.9999986 -0.4135466 7.15256e-7 0.09182834 8.34465e-7 0.8843948 0.9999987 1.38977 1.01328e-6 1.38977 0.9999989 0.1627611 1 0.1529952 0 0.1627606 0 0.8372402 0 0.8470059 1 0.8372393 1 1.413547 1.54972e-6 1.413547 0.9999993 0.9081718 0.9999992 -0.1725254 1 -0.1627599 1 -0.1627596 0 1.172528 0 1.162762 0 1.162762 1 0.1156052 1.3113e-6 0.1156049 0.999999 -0.3897702 0.9999988 0.1156052 1.3113e-6 0.211704 1.19209e-6 0.2117037 0.9999991 0.9081718 0.9999992 0.8061287 0.9999991 0.8061292 1.3113e-6 0.211704 1.19209e-6 0.3078027 1.19209e-6 0.3078025 0.9999989 0.8061287 0.9999991 0.704086 0.9999988 0.7040861 1.3113e-6 0.3078027 1.19209e-6 0.4039013 1.19209e-6 0.4039011 0.999999 0.704086 0.9999988 0.602043 0.999999 0.602043 1.3113e-6 0.4039013 1.19209e-6 0.5 1.19209e-6 0.4999998 0.9999988 0.602043 0.999999 0.4999998 0.9999989 0.5 1.3113e-6 0.5 1.19209e-6 0.5960989 1.3113e-6 0.5960986 0.9999988 0.4999998 0.9999989 0.397957 0.9999988 0.3979572 1.19209e-6 0.5960989 1.3113e-6 0.6921975 1.01328e-6 0.6921973 0.9999989 0.397957 0.9999988 0.2959139 0.9999986 0.2959141 1.01328e-6 0.2959139 0.9999986 0.1938712 0.9999986 0.1938712 1.01328e-6 0.6921975 1.01328e-6 0.7882962 1.01328e-6 0.7882962 0.9999988 0.1938712 0.9999986 0.09182786 0.9999986 0.09182834 8.34465e-7 0.7882962 1.01328e-6 0.8843948 1.01328e-6 0.8843948 0.9999987 0.09182786 0.9999986 -0.4135472 0.9999985 -0.4135466 7.15256e-7 0.8843948 0.9999987 0.8843948 1.01328e-6 1.38977 1.01328e-6 0.1627611 1 0.1529952 1 0.1529952 0 0.8372402 0 0.8470059 0 0.8470059 1</float_array>
+          <technique_common>
+            <accessor source="#wall_1_rounded_corner-mesh-map-0-array" count="144" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="wall_1_rounded_corner-mesh-vertices">
+          <input semantic="POSITION" source="#wall_1_rounded_corner-mesh-positions"/>
+        </vertices>
+        <triangles material="wall_mp_1-material" count="24">
+          <input semantic="VERTEX" source="#wall_1_rounded_corner-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#wall_1_rounded_corner-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#wall_1_rounded_corner-mesh-map-0" offset="2" set="0"/>
+          <p>7 3 3 10 4 4 6 5 5 0 9 9 7 10 10 6 11 11 0 9 12 13 12 13 1 13 14 12 15 18 17 16 19 13 12 20 16 19 24 21 20 25 17 16 26 20 23 30 25 24 31 21 20 32 24 27 36 29 28 37 25 24 38 28 31 42 33 32 43 29 28 44 32 37 51 37 38 52 33 32 53 36 41 57 41 42 58 37 38 59 41 42 63 45 45 64 46 46 65 45 48 69 49 48 70 46 48 71 7 3 75 11 48 76 10 4 77 0 9 81 1 13 82 7 10 83 0 9 84 12 15 85 13 12 86 12 15 90 16 19 91 17 16 92 16 19 96 20 23 97 21 20 98 20 23 102 24 27 103 25 24 104 24 27 108 28 31 109 29 28 110 28 31 114 32 37 115 33 32 116 32 37 123 36 41 124 37 38 125 36 41 129 40 51 130 41 42 131 41 42 135 40 51 136 45 45 137 45 54 141 48 54 142 49 54 143</p>
+        </triangles>
+        <triangles material="wall_mp_1-material" count="24">
+          <input semantic="VERTEX" source="#wall_1_rounded_corner-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#wall_1_rounded_corner-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#wall_1_rounded_corner-mesh-map-0" offset="2" set="0"/>
+          <p>4 0 0 3 1 1 2 2 2 4 6 6 9 7 7 5 8 8 3 1 15 14 14 16 2 2 17 15 17 21 18 18 22 14 14 23 19 21 27 22 22 28 18 18 29 23 25 33 26 26 34 22 22 35 27 29 39 30 30 40 26 26 41 31 33 45 34 34 46 30 30 47 35 35 48 38 36 49 34 34 50 39 39 54 42 40 55 38 36 56 43 43 60 47 44 61 42 40 62 44 47 66 50 47 67 47 47 68 4 0 72 5 49 73 3 1 74 4 6 78 8 50 79 9 7 80 3 1 87 15 17 88 14 14 89 15 17 93 19 21 94 18 18 95 19 21 99 23 25 100 22 22 101 23 25 105 27 29 106 26 26 107 27 29 111 31 33 112 30 30 113 31 33 117 35 35 118 34 34 119 35 35 120 39 39 121 38 36 122 39 39 126 43 43 127 42 40 128 43 43 132 44 52 133 47 44 134 44 53 138 51 53 139 50 53 140</p>
+        </triangles>
+      </mesh>
+    </geometry>
+  </library_geometries>
+  <library_visual_scenes>
+    <visual_scene id="Scene" name="Scene">
+      <node id="wall_1_rounded_corner" name="wall_1_rounded_corner" type="NODE">
+        <matrix sid="transform">1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</matrix>
+        <instance_geometry url="#wall_1_rounded_corner-mesh" name="wall_1_rounded_corner">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="wall_mp_1-material" target="#wall_mp_1-material">
+                <bind_vertex_input semantic="UVMap" input_semantic="TEXCOORD" input_set="0"/>
+              </instance_material>
+              <instance_material symbol="wall_mp_1-material" target="#wall_mp_1-material">
+                <bind_vertex_input semantic="UVMap" input_semantic="TEXCOORD" input_set="0"/>
+              </instance_material>
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+      </node>
+    </visual_scene>
+  </library_visual_scenes>
+  <scene>
+    <instance_visual_scene url="#Scene"/>
+  </scene>
+</COLLADA>

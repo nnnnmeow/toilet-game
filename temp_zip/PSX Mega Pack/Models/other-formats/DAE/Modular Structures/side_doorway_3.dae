@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<COLLADA xmlns="http://www.collada.org/2005/11/COLLADASchema" version="1.4.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <asset>
+    <contributor>
+      <author>Blender User</author>
+      <authoring_tool>Blender 3.4.0 commit date:2022-12-06, commit time:18:46, hash:a95bf1ac01be</authoring_tool>
+    </contributor>
+    <created>2025-12-17T19:01:49</created>
+    <modified>2025-12-17T19:01:49</modified>
+    <unit name="meter" meter="1"/>
+    <up_axis>Z_UP</up_axis>
+  </asset>
+  <library_effects>
+    <effect id="wall_mp_1-effect">
+      <profile_COMMON>
+        <newparam sid="wall_mp_1_png-surface">
+          <surface type="2D">
+            <init_from>wall_mp_1_png</init_from>
+          </surface>
+        </newparam>
+        <newparam sid="wall_mp_1_png-sampler">
+          <sampler2D>
+            <source>wall_mp_1_png-surface</source>
+          </sampler2D>
+        </newparam>
+        <technique sid="common">
+          <lambert>
+            <emission>
+              <color sid="emission">0 0 0 1</color>
+            </emission>
+            <diffuse>
+              <texture texture="wall_mp_1_png-sampler" texcoord="UVMap"/>
+            </diffuse>
+            <index_of_refraction>
+              <float sid="ior">1.45</float>
+            </index_of_refraction>
+          </lambert>
+        </technique>
+      </profile_COMMON>
+    </effect>
+    <effect id="door_frame_wood_1-effect">
+      <profile_COMMON>
+        <newparam sid="door_frame_wood_1_png-surface">
+          <surface type="2D">
+            <init_from>door_frame_wood_1_png</init_from>
+          </surface>
+        </newparam>
+        <newparam sid="door_frame_wood_1_png-sampler">
+          <sampler2D>
+            <source>door_frame_wood_1_png-surface</source>
+          </sampler2D>
+        </newparam>
+        <technique sid="common">
+          <lambert>
+            <emission>
+              <color sid="emission">0 0 0 1</color>
+            </emission>
+            <diffuse>
+              <texture texture="door_frame_wood_1_png-sampler" texcoord="UVMap"/>
+            </diffuse>
+            <index_of_refraction>
+              <float sid="ior">1.45</float>
+            </index_of_refraction>
+          </lambert>
+        </technique>
+      </profile_COMMON>
+    </effect>
+  </library_effects>
+  <library_images>
+    <image id="door_frame_wood_1_png" name="door_frame_wood_1_png">
+      <init_from>door_frame_wood_1.png</init_from>
+    </image>
+    <image id="wall_mp_1_png" name="wall_mp_1_png">
+      <init_from>wall_mp_1.png</init_from>
+    </image>
+  </library_images>
+  <library_materials>
+    <material id="wall_mp_1-material" name="wall_mp_1">
+      <instance_effect url="#wall_mp_1-effect"/>
+    </material>
+    <material id="door_frame_wood_1-material" name="door_frame_wood_1">
+      <instance_effect url="#door_frame_wood_1-effect"/>
+    </material>
+  </library_materials>
+  <library_geometries>
+    <geometry id="side_doorway_3-mesh" name="side_doorway_3">
+      <mesh>
+        <source id="side_doorway_3-mesh-positions">
+          <float_array id="side_doorway_3-mesh-positions-array" count="174">2 -0.06000006 0 2 -0.05999982 3 2 0.0600003 0 2 0.06000006 3 2.03 -0.03000009 0 2.03 -0.02999985 3 2.03 0.03000026 0 2.03 0.03000003 3 -2 0.05999982 0 -2 0.05999958 3 -2 -0.06000047 0 -2 -0.0600003 3 -2.03 0.02999985 0 -2.03 0.02999961 3 -2.03 -0.0300005 0 -2.03 -0.03000026 3 1.58 0.06000012 0 1.58 -0.06000024 0 1.58 -0.06 2.18 1.58 0.06000006 2.18 0.4199997 -0.06000018 2.18 0.4199997 0.05999994 2.18 0.4199996 0.06 0 0.4199996 -0.06000036 0 0.4199996 0.05999976 0.16 0.4199996 -0.05999982 0.16 0.4200014 0.1000004 2.18 0.4200014 -0.09999954 2.18 1.5 0.0800004 2.099999 1.5 -0.07999956 2.099999 1.58 0.1000004 2.18 1.58 -0.09999954 2.18 0.4999995 0.0800004 2.1 0.4999997 -0.07999956 2.099999 1.5 0.0800004 0 1.5 -0.07999956 0 0.4999997 0.0800004 0 0.4999997 -0.07999956 0 1.58 0.1000004 0 1.58 -0.09999954 0 0.4199997 0.1000004 0 0.4199997 -0.09999954 0 1.54 0.1000004 2.14 1.52 0.0800004 2.12 0.4599997 0.1000004 2.14 0.4799997 0.0800004 2.119999 1.54 0.1000004 0 1.52 0.0800004 0 0.4599997 0.1000004 0 0.4799997 0.0800004 0 0.4799997 -0.07999956 2.12 0.4599997 -0.09999954 2.14 1.54 -0.09999954 2.14 1.52 -0.0799995 2.119999 1.54 -0.09999954 0 1.52 -0.07999956 0 0.4799997 -0.07999956 0 0.4599997 -0.09999954 0</float_array>
+          <technique_common>
+            <accessor source="#side_doorway_3-mesh-positions-array" count="58" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="side_doorway_3-mesh-normals">
+          <float_array id="side_doorway_3-mesh-normals-array" count="168">0 1 0 0.7071099 0.7071037 0 0.7071099 -0.7071037 0 -0.7071099 -0.7071037 0 -0.70711 0.7071036 0 2.00456e-7 -1 0 0 -1 0 0 -1 2.18066e-7 0 1 0 -1.89812e-7 1 0 0 0 1 -1 0 7.65564e-7 0 -1 0 1 0 0 1 1.41916e-6 0 0 -1 0 0 1 3.21148e-7 -1 0 0 0 -1 7.45059e-7 0 1 0 0 1 0 0 1.49012e-6 -1 -1.86264e-7 1 0 -0.7071112 0.7071023 0 0 1 0 0.7071076 0.707106 0 0 1 -7.16394e-7 0 0.707111 -0.7071026 0 -1 0 0 -0.7071107 -0.707103 0.7071057 -0.707108 0 3.69016e-7 -1 0 -0.7071073 -0.7071064 0 0 1 0 0.7071024 0.7071111 0 0.7071024 -0.7071111 0 -0.7071024 -0.7071112 0 -0.7071025 0.7071111 0 3.81399e-7 -1 0 0 -1 0 1.79842e-7 -1 0 0 1 0 -3.81399e-7 1 0 1 0 0 0 1 -2.15584e-7 -1 0 0 0 -1 0 0 0 -1 -0.7071076 0.7071059 0 0.7071067 0.7071069 0 0 1 1.07103e-6 0 0.7071107 -0.7071029 0 -1 3.44937e-7 0 -0.7071103 -0.7071033 0.7071067 -0.707107 0 -0.7071076 -0.707106 0</float_array>
+          <technique_common>
+            <accessor source="#side_doorway_3-mesh-normals-array" count="56" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="side_doorway_3-mesh-map-0">
+          <float_array id="side_doorway_3-mesh-map-0-array" count="408">0.603435 0.7336131 0.007451951 1.70525e-6 0.007451951 1.000008 0.9925478 1.000008 0.999936 1.70525e-6 0.9925478 1.70525e-6 0.9925478 1.70525e-6 0.999936 1.000008 0.9925478 1.000008 0.007451951 1.000008 6.38e-5 1.70525e-6 0.007451951 1.70525e-6 0.007451951 1.70525e-6 6.38e-5 1.000008 0.007451951 1.000008 0.8891125 0.7284277 0.9925478 1.70525e-6 0.9925478 1.000008 0.007451951 1.70525e-6 0.603435 0.733613 0.007451951 1.000008 0.603435 0.733613 0.9925478 1.000008 0.007451951 1.000008 0.9925478 1.000008 0.603435 0.7336131 0.007451951 1.000008 0.9925478 1.70525e-6 0.8891125 0.7284277 0.9925478 1.000008 1.25 0.6984283 0.4518359 0.5608137 1.25 0.5608137 1.25 0.2030152 -0.2499997 0.3406301 -0.2499996 0.2030153 -0.2224764 0.7923979 1.25 0.8199208 -0.2499991 0.819921 1.25 0.2030152 -0.2499999 0.0654006 1.25 0.06540054 -0.1949537 0.4507219 1.25 0.5608136 -0.1949537 0.5608137 1.25 0.8669054 -0.1949533 0.8806671 -0.2087152 0.8669056 0.479359 1.084728 1.25 1.112251 0.4518359 1.112251 -0.1949539 0.3406301 1.25 0.4507219 -0.1949539 0.4507219 0.4931205 1.159236 1.194956 1.172997 0.506882 1.172997 -0.2499995 0.9276515 1.194954 0.9414129 -0.2499995 0.9414131 1.25 0.7454133 -0.194954 0.7591747 -0.2087154 0.7454131 0.5619265 1.051505 1.25 0.9414131 1.25 1.051505 1.25 0.6984287 -0.2224771 0.7259516 -0.25 0.6984285 1.25 0.7259516 -0.2087154 0.7454131 -0.2224771 0.7259516 -0.2499996 0.8806671 1.222477 0.9081898 -0.2499995 0.90819 -0.2499995 0.90819 1.208716 0.9276515 -0.2499995 0.9276515 0.506882 1.051505 1.208717 1.065266 0.4931203 1.065267 1.208717 1.065266 0.479359 1.084728 0.4931203 1.065267 1.25 1.112251 0.479359 1.139774 0.451836 1.112251 0.479359 1.139774 1.208717 1.159235 0.4931205 1.159236 1.25 0.8199208 -0.2224768 0.8474438 -0.2499995 0.819922 1.25 0.8474438 -0.2087152 0.8669056 -0.2224768 0.8474438 -0.1949537 0.7591748 1.25 0.7729362 -0.2087152 0.7729364 -0.2087152 0.7729364 1.25 0.7923979 -0.2224764 0.7923979 0.603435 0.7336131 0.603435 0.002990186 0.007451951 1.70525e-6 0.9925478 1.000008 0.999936 1.000008 0.999936 1.70525e-6 0.9925478 1.70525e-6 0.999936 1.70525e-6 0.999936 1.000008 0.007451951 1.000008 6.38e-5 1.000008 6.38e-5 1.70525e-6 0.007451951 1.70525e-6 6.38e-5 1.70525e-6 6.38e-5 1.000008 0.8891125 0.7284277 0.8891127 1.70525e-6 0.9925478 1.70525e-6 0.007451951 1.70525e-6 0.6034349 0.002990245 0.603435 0.733613 0.603435 0.733613 0.8891125 0.7284277 0.9925478 1.000008 0.9925478 1.000008 0.8891125 0.7284277 0.603435 0.7336131 0.9925478 1.70525e-6 0.8891127 1.70525e-6 0.8891125 0.7284277 1.25 0.6984283 0.4518359 0.6984283 0.4518359 0.5608137 1.25 0.2030152 1.25 0.34063 -0.2499997 0.3406301 -0.2224764 0.7923979 1.25 0.7923979 1.25 0.8199208 1.25 0.2030152 -0.2499999 0.2030153 -0.2499999 0.0654006 -0.1949537 0.4507219 1.25 0.4507219 1.25 0.5608136 1.25 0.8669054 1.25 0.8806669 -0.1949533 0.8806671 0.479359 1.084728 1.222478 1.084728 1.25 1.112251 -0.1949539 0.3406301 1.25 0.34063 1.25 0.4507219 0.4931205 1.159236 1.208717 1.159235 1.194956 1.172997 -0.2499995 0.9276515 1.208716 0.9276515 1.194954 0.9414129 1.25 0.7454133 1.25 0.7591747 -0.194954 0.7591747 0.5619265 1.051505 0.5619265 0.9414131 1.25 0.9414131 1.25 0.6984287 1.25 0.7259516 -0.2224771 0.7259516 1.25 0.7259516 1.25 0.7454133 -0.2087154 0.7454131 -0.2499996 0.8806671 1.25 0.880668 1.222477 0.9081898 -0.2499995 0.90819 1.222477 0.9081898 1.208716 0.9276515 0.506882 1.051505 1.194956 1.051505 1.208717 1.065266 1.208717 1.065266 1.222478 1.084728 0.479359 1.084728 1.25 1.112251 1.222478 1.139774 0.479359 1.139774 0.479359 1.139774 1.222478 1.139774 1.208717 1.159235 1.25 0.8199208 1.25 0.8474438 -0.2224768 0.8474438 1.25 0.8474438 1.25 0.8669054 -0.2087152 0.8669056 -0.1949537 0.7591748 1.25 0.7591748 1.25 0.7729362 -0.2087152 0.7729364 1.25 0.7729362 1.25 0.7923979</float_array>
+          <technique_common>
+            <accessor source="#side_doorway_3-mesh-map-0-array" count="204" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="side_doorway_3-mesh-vertices">
+          <input semantic="POSITION" source="#side_doorway_3-mesh-positions"/>
+        </vertices>
+        <lines count="1">
+          <input semantic="VERTEX" source="#side_doorway_3-mesh-vertices" offset="0"/>
+          <p>24 25</p>
+        </lines>
+        <triangles material="wall_mp_1-material" count="20">
+          <input semantic="VERTEX" source="#side_doorway_3-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#side_doorway_3-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#side_doorway_3-mesh-map-0" offset="2" set="0"/>
+          <p>21 0 0 8 0 1 9 0 2 3 1 3 6 1 4 2 1 5 0 2 6 5 2 7 1 2 8 11 3 9 14 3 10 10 3 11 8 4 12 13 4 13 9 4 14 18 5 15 0 5 16 1 5 17 10 6 18 20 6 19 11 6 20 20 7 21 1 7 22 11 7 23 3 8 24 21 8 25 9 8 26 2 9 27 19 9 28 3 9 29 21 33 102 22 33 103 8 33 104 3 34 105 7 34 106 6 34 107 0 35 108 4 35 109 5 35 110 11 36 111 15 36 112 14 36 113 8 37 114 12 37 115 13 37 116 18 38 117 17 38 118 0 38 119 10 39 120 23 39 121 20 39 122 20 40 123 18 40 124 1 40 125 3 41 126 19 41 127 21 41 128 2 42 129 16 42 130 19 42 131</p>
+        </triangles>
+        <triangles material="door_frame_wood_1-material" count="48">
+          <input semantic="VERTEX" source="#side_doorway_3-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#side_doorway_3-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#side_doorway_3-mesh-map-0" offset="2" set="0"/>
+          <p>30 10 30 27 10 31 31 10 32 40 11 33 27 11 34 26 11 35 52 12 36 39 12 37 31 12 38 38 13 39 31 13 40 39 13 41 33 14 42 36 14 43 32 14 44 56 15 45 33 15 46 50 15 47 42 16 48 26 16 49 30 16 50 28 17 51 35 17 52 29 17 53 53 18 54 33 18 55 29 18 56 49 19 57 32 19 58 36 19 59 47 20 60 28 20 61 43 20 62 28 21 63 33 21 64 32 21 65 38 22 66 42 22 67 30 22 68 46 23 69 43 23 70 42 23 71 40 24 72 44 24 73 48 24 74 48 25 75 45 25 76 49 25 77 28 26 78 45 26 79 43 26 80 45 27 81 42 27 82 43 27 83 27 28 84 52 28 85 31 28 86 52 29 87 50 29 88 53 29 89 41 15 90 51 15 91 27 15 92 57 30 93 50 30 94 51 30 95 29 31 96 55 31 97 53 31 98 53 32 99 54 32 100 52 32 101 30 10 132 26 10 133 27 10 134 40 11 135 41 11 136 27 11 137 52 15 138 54 15 139 39 15 140 38 13 141 30 13 142 31 13 143 33 43 144 37 43 145 36 43 146 56 15 147 37 15 148 33 15 149 42 44 150 44 44 151 26 44 152 28 45 153 34 45 154 35 45 155 53 46 156 50 46 157 33 46 158 49 24 159 45 24 160 32 24 161 47 24 162 34 24 163 28 24 164 28 47 165 29 47 166 33 47 167 38 24 168 46 24 169 42 24 170 46 48 171 47 48 172 43 48 173 40 24 174 26 24 175 44 24 176 48 49 177 44 49 178 45 49 179 28 50 180 32 50 181 45 50 182 45 51 183 44 51 184 42 51 185 27 52 186 51 52 187 52 52 188 52 53 189 51 53 190 50 53 191 41 15 192 57 15 193 51 15 194 57 54 195 56 54 196 50 54 197 29 15 198 35 15 199 55 15 200 53 55 201 55 55 202 54 55 203</p>
+        </triangles>
+      </mesh>
+    </geometry>
+  </library_geometries>
+  <library_visual_scenes>
+    <visual_scene id="Scene" name="Scene">
+      <node id="side_doorway_3" name="side_doorway_3" type="NODE">
+        <matrix sid="transform">1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</matrix>
+        <instance_geometry url="#side_doorway_3-mesh" name="side_doorway_3">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="wall_mp_1-material" target="#wall_mp_1-material">
+                <bind_vertex_input semantic="UVMap" input_semantic="TEXCOORD" input_set="0"/>
+              </instance_material>
+              <instance_material symbol="wall_mp_1-material" target="#wall_mp_1-material">
+                <bind_vertex_input semantic="UVMap" input_semantic="TEXCOORD" input_set="0"/>
+              </instance_material>
+              <instance_material symbol="door_frame_wood_1-material" target="#door_frame_wood_1-material">
+                <bind_vertex_input semantic="UVMap" input_semantic="TEXCOORD" input_set="0"/>
+              </instance_material>
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+      </node>
+    </visual_scene>
+  </library_visual_scenes>
+  <scene>
+    <instance_visual_scene url="#Scene"/>
+  </scene>
+</COLLADA>

@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<COLLADA xmlns="http://www.collada.org/2005/11/COLLADASchema" version="1.4.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <asset>
+    <contributor>
+      <author>Blender User</author>
+      <authoring_tool>Blender 3.4.0 commit date:2022-12-06, commit time:18:46, hash:a95bf1ac01be</authoring_tool>
+    </contributor>
+    <created>2025-12-17T19:04:21</created>
+    <modified>2025-12-17T19:04:21</modified>
+    <unit name="meter" meter="1"/>
+    <up_axis>Z_UP</up_axis>
+  </asset>
+  <library_effects>
+    <effect id="cigs_packet_1-effect">
+      <profile_COMMON>
+        <newparam sid="cigs_packet_1_png_001-surface">
+          <surface type="2D">
+            <init_from>cigs_packet_1_png_001</init_from>
+          </surface>
+        </newparam>
+        <newparam sid="cigs_packet_1_png_001-sampler">
+          <sampler2D>
+            <source>cigs_packet_1_png_001-surface</source>
+          </sampler2D>
+        </newparam>
+        <technique sid="common">
+          <lambert>
+            <emission>
+              <color sid="emission">0 0 0 1</color>
+            </emission>
+            <diffuse>
+              <texture texture="cigs_packet_1_png_001-sampler" texcoord="UVMap"/>
+            </diffuse>
+            <index_of_refraction>
+              <float sid="ior">1.45</float>
+            </index_of_refraction>
+          </lambert>
+        </technique>
+      </profile_COMMON>
+    </effect>
+  </library_effects>
+  <library_images>
+    <image id="cigs_packet_1_png_001" name="cigs_packet_1_png_001">
+      <init_from>cigs_packet_1.png.001.png</init_from>
+    </image>
+  </library_images>
+  <library_materials>
+    <material id="cigs_packet_1-material" name="cigs_packet_1">
+      <instance_effect url="#cigs_packet_1-effect"/>
+    </material>
+  </library_materials>
+  <library_geometries>
+    <geometry id="cigs_packet_1-mesh" name="cigs_packet_1">
+      <mesh>
+        <source id="cigs_packet_1-mesh-positions">
+          <float_array id="cigs_packet_1-mesh-positions-array" count="24">-0.08099997 0.04860091 0 -0.08099997 0.04860091 0.04211997 0.08099997 0.04860097 0 0.08099997 0.04860097 0.04211997 -0.08099997 -0.04860097 0 -0.08099997 -0.04860097 0.04211997 0.08099997 -0.04859995 0 0.08099997 -0.04859995 0.04211997</float_array>
+          <technique_common>
+            <accessor source="#cigs_packet_1-mesh-positions-array" count="8" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="cigs_packet_1-mesh-normals">
+          <float_array id="cigs_packet_1-mesh-normals-array" count="69">-1 0 0 -1 0 -1.30843e-7 -1 0 0 6.04785e-6 -1 0 6.04785e-6 -1 0 0 1 -2.01755e-7 0 1 0 0 1 1.66842e-7 1 2.05992e-7 1.30842e-7 1 1.46206e-7 0 1 2.38458e-7 1.76889e-7 0 0 -1 0 0 -1 0 0 -1 0 0 1 0 0 1 0 0 1 -1 0 -1.76889e-7 6.04785e-6 -1 0 0 1 -2.72977e-7 1 0 0 0 0 -1 0 0 1</float_array>
+          <technique_common>
+            <accessor source="#cigs_packet_1-mesh-normals-array" count="23" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="cigs_packet_1-mesh-map-0">
+          <float_array id="cigs_packet_1-mesh-map-0-array" count="72">0.5 0.2352941 0 0 0.5 0 1 1 0.75 0.2352941 0.75 1 0.75 0.2352941 1 1 0.75 1 1 0 0.5 0.2352941 1 0.2352941 0 0.2352941 0.5 1 0.5 0.2352941 0 0.2352941 0.5 1 0 1 0.5 0.2352941 0 0.2352941 0 0 1 1 1 0.2352941 0.75 0.2352941 0.75 0.2352941 1 0.2352941 1 1 1 0 0.5 0 0.5 0.2352941 0 0.2352941 0 1 0.5 1 0 0.2352941 0.5 0.2352941 0.5 1</float_array>
+          <technique_common>
+            <accessor source="#cigs_packet_1-mesh-map-0-array" count="36" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="cigs_packet_1-mesh-vertices">
+          <input semantic="POSITION" source="#cigs_packet_1-mesh-positions"/>
+        </vertices>
+        <triangles material="cigs_packet_1-material" count="12">
+          <input semantic="VERTEX" source="#cigs_packet_1-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#cigs_packet_1-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#cigs_packet_1-mesh-map-0" offset="2" set="0"/>
+          <p>5 0 0 0 1 1 4 2 2 7 3 3 4 3 4 6 4 5 0 5 6 3 6 7 2 7 8 3 8 9 6 9 10 2 10 11 0 11 12 6 12 13 4 13 14 1 14 15 7 15 16 3 16 17 5 0 18 1 17 19 0 1 20 7 3 21 5 18 22 4 3 23 0 5 24 1 19 25 3 6 26 3 8 27 7 20 28 6 9 29 0 11 30 2 21 31 6 12 32 1 14 33 5 22 34 7 15 35</p>
+        </triangles>
+      </mesh>
+    </geometry>
+  </library_geometries>
+  <library_visual_scenes>
+    <visual_scene id="Scene" name="Scene">
+      <node id="cigs_packet_1" name="cigs_packet_1" type="NODE">
+        <matrix sid="transform">1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</matrix>
+        <instance_geometry url="#cigs_packet_1-mesh" name="cigs_packet_1">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="cigs_packet_1-material" target="#cigs_packet_1-material">
+                <bind_vertex_input semantic="UVMap" input_semantic="TEXCOORD" input_set="0"/>
+              </instance_material>
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+      </node>
+    </visual_scene>
+  </library_visual_scenes>
+  <scene>
+    <instance_visual_scene url="#Scene"/>
+  </scene>
+</COLLADA>

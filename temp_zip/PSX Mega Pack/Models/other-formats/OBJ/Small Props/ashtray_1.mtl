@@ -1,0 +1,32 @@
+# Blender 3.4.0 MTL File: 'PSX Mega Pack (source file).blend'
+# www.blender.org
+
+newmtl ash_1
+Ns 0.000000
+Ka 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+illum 1
+map_Kd C:/ash_1.png
+map_d C:/ash_1.png
+
+newmtl cigs_packet_1
+Ns 0.000000
+Ka 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 1
+map_Kd C:/cigs_packet_1.png
+
+newmtl plastic_4
+Ns 0.000000
+Ka 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 1
+map_Kd C:/plastic_4.png

@@ -5,6 +5,8 @@ extends StaticBody3D
 var flush_amount : int = 10
 var rng = RandomNumberGenerator.new()
 var events_dictionary = {
+	1: "Event",
+	17: "Enemy",
 	100: "Item",
 }
 var categories_dictionary = {
@@ -45,13 +47,7 @@ func try_flushing():
 		return null
 
 func spawn_item():
-	#print("spawning item!")
 	var item = whiskey_bottle.instantiate();
 	add_child(item);
 	item.position = self.position + Vector3(-0.15, 0.5, -0.5);
-	#print(self.position)
-	#item.scale = Vector3(0.01, 0.01, 0.01);
-	#print(item.position)
-	item.apply_impulse(Vector3(0, 2, -2));
-	#print(item.visible, " ", item.get_child_count())
-	#print(item.scale)
+	item.apply_impulse(Vector3(0, 4, -2));

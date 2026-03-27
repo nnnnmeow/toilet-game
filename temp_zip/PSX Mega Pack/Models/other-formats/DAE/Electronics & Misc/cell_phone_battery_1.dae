@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<COLLADA xmlns="http://www.collada.org/2005/11/COLLADASchema" version="1.4.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <asset>
+    <contributor>
+      <author>Blender User</author>
+      <authoring_tool>Blender 3.4.0 commit date:2022-12-06, commit time:18:46, hash:a95bf1ac01be</authoring_tool>
+    </contributor>
+    <created>2025-12-17T19:09:26</created>
+    <modified>2025-12-17T19:09:26</modified>
+    <unit name="meter" meter="1"/>
+    <up_axis>Z_UP</up_axis>
+  </asset>
+  <library_effects>
+    <effect id="cell_phone_battery_1-effect">
+      <profile_COMMON>
+        <newparam sid="cell_phone_battery_1_png-surface">
+          <surface type="2D">
+            <init_from>cell_phone_battery_1_png</init_from>
+          </surface>
+        </newparam>
+        <newparam sid="cell_phone_battery_1_png-sampler">
+          <sampler2D>
+            <source>cell_phone_battery_1_png-surface</source>
+          </sampler2D>
+        </newparam>
+        <technique sid="common">
+          <lambert>
+            <emission>
+              <color sid="emission">0 0 0 1</color>
+            </emission>
+            <diffuse>
+              <texture texture="cell_phone_battery_1_png-sampler" texcoord="UVMap"/>
+            </diffuse>
+            <index_of_refraction>
+              <float sid="ior">1.45</float>
+            </index_of_refraction>
+          </lambert>
+        </technique>
+      </profile_COMMON>
+    </effect>
+  </library_effects>
+  <library_images>
+    <image id="cell_phone_battery_1_png" name="cell_phone_battery_1_png">
+      <init_from>cell_phone_battery_1.png</init_from>
+    </image>
+  </library_images>
+  <library_materials>
+    <material id="cell_phone_battery_1-material" name="cell_phone_battery_1">
+      <instance_effect url="#cell_phone_battery_1-effect"/>
+    </material>
+  </library_materials>
+  <library_geometries>
+    <geometry id="cell_phone_battery_1-mesh" name="cell_phone_battery_1">
+      <mesh>
+        <source id="cell_phone_battery_1-mesh-positions">
+          <float_array id="cell_phone_battery_1-mesh-positions-array" count="48">-0.03000402 -0.04500281 0.003599941 -0.02640402 -0.04500281 0 -0.02640402 0.04499727 0 -0.03000402 0.04499727 0.003599941 0.02639538 -0.04500281 0 0.02999538 -0.04500281 0.003599941 0.02999538 0.04499727 0.003599941 0.02639538 0.04499727 0 -0.03000402 0.04499727 0.008399963 -0.02640402 0.04499727 0.01199996 -0.02640402 -0.04500281 0.01199996 -0.03000402 -0.04500281 0.008399963 0.02639538 0.04499727 0.01199996 0.02999538 0.04499727 0.008399963 0.02999538 -0.04500281 0.008399963 0.02639538 -0.04500281 0.01199996</float_array>
+          <technique_common>
+            <accessor source="#cell_phone_battery_1-mesh-positions-array" count="16" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="cell_phone_battery_1-mesh-normals">
+          <float_array id="cell_phone_battery_1-mesh-normals-array" count="36">0 -1 0 0 0 -1 0 0 1 1 0 0 0 1 0 -0.7071068 0 -0.7071067 0.7071068 0 -0.7071067 -0.707107 0 0.7071066 0.707107 0 0.7071066 -1 0 0 -0.7071068 0 0.7071068 0.7071068 0 0.7071068</float_array>
+          <technique_common>
+            <accessor source="#cell_phone_battery_1-mesh-normals-array" count="12" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="cell_phone_battery_1-mesh-map-0">
+          <float_array id="cell_phone_battery_1-mesh-map-0-array" count="168">0.3935547 0 0.417329 0.02920293 0.3935547 0.0985915 0.03125 1 0.4166666 0.112676 0.03125 0.112676 0.96875 0.112676 0.5833333 1 0.5833333 0.112676 0.4791666 1 0.5208333 0.112676 0.4791666 0.112676 0.9688802 0.0985915 0.9957555 0.06643378 0.9688802 0 0.03125 0.112676 0 1 0.03125 1 0.4479166 1 0.4895833 0.112676 0.4479166 0.112676 0.5416667 0.112676 0.5833333 1 0.5416667 1 0.5208333 1 0.5520833 0.112676 0.5208333 0.112676 0.4791666 0.112676 0.5208333 1 0.4791666 1 0.417329 0.02920293 0.417329 0.06952625 0.3935547 0.0985915 0.3935547 0.0985915 0.04191339 0.0985915 0.04191339 0 0.04191339 0.0985915 0.01905 0.06952631 0.04191339 0 0.01905 0.06952631 0.01905 0.02920293 0.04191339 0 0.04191339 0 0.3935547 0 0.3935547 0.0985915 0.03125 1 0.4166666 1 0.4166666 0.112676 0.96875 0.112676 0.96875 1 0.5833333 1 0.4791666 1 0.5208333 1 0.5208333 0.112676 0.9957555 0.06643378 0.9957555 0.03146594 0.9688802 0 0.9688802 0 0.5833131 0 0.5833131 0.0985915 0.5833131 0 0.5564378 0.03281247 0.5833131 0.0985915 0.5564378 0.03281247 0.5564378 0.06957572 0.5833131 0.0985915 0.5833131 0.0985915 0.9688802 0.0985915 0.9688802 0 0.03125 0.112676 0 0.112676 0 1 0.4479166 1 0.4895833 1 0.4895833 0.112676 0.5416667 0.112676 0.5833333 0.112676 0.5833333 1 0.5208333 1 0.5520833 1 0.5520833 0.112676 0.4791666 0.112676 0.5208333 0.112676 0.5208333 1</float_array>
+          <technique_common>
+            <accessor source="#cell_phone_battery_1-mesh-map-0-array" count="84" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="cell_phone_battery_1-mesh-vertices">
+          <input semantic="POSITION" source="#cell_phone_battery_1-mesh-positions"/>
+        </vertices>
+        <triangles material="cell_phone_battery_1-material" count="28">
+          <input semantic="VERTEX" source="#cell_phone_battery_1-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#cell_phone_battery_1-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#cell_phone_battery_1-mesh-map-0" offset="2" set="0"/>
+          <p>10 0 0 11 0 1 1 0 2 2 1 3 4 1 4 1 1 5 15 2 6 9 2 7 10 2 8 6 3 9 14 3 10 5 3 11 12 4 12 13 4 13 7 4 14 1 5 15 3 5 16 2 5 17 7 6 18 5 6 19 4 6 20 11 7 21 9 7 22 8 7 23 13 8 24 15 8 25 14 8 26 0 9 27 8 9 28 3 9 29 11 0 30 0 0 31 1 0 32 1 0 33 4 0 34 15 0 35 4 0 36 5 0 37 15 0 38 5 0 39 14 0 40 15 0 41 15 0 42 10 0 43 1 0 44 2 1 45 7 1 46 4 1 47 15 2 48 12 2 49 9 2 50 6 3 51 13 3 52 14 3 53 13 4 54 6 4 55 7 4 56 7 4 57 2 4 58 9 4 59 2 4 60 3 4 61 9 4 62 3 4 63 8 4 64 9 4 65 9 4 66 12 4 67 7 4 68 1 5 69 0 5 70 3 5 71 7 6 72 6 6 73 5 6 74 11 10 75 10 10 76 9 10 77 13 11 78 12 11 79 15 11 80 0 9 81 11 9 82 8 9 83</p>
+        </triangles>
+      </mesh>
+    </geometry>
+  </library_geometries>
+  <library_visual_scenes>
+    <visual_scene id="Scene" name="Scene">
+      <node id="cell_phone_battery_1" name="cell_phone_battery_1" type="NODE">
+        <matrix sid="transform">1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</matrix>
+        <instance_geometry url="#cell_phone_battery_1-mesh" name="cell_phone_battery_1">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="cell_phone_battery_1-material" target="#cell_phone_battery_1-material">
+                <bind_vertex_input semantic="UVMap" input_semantic="TEXCOORD" input_set="0"/>
+              </instance_material>
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+      </node>
+    </visual_scene>
+  </library_visual_scenes>
+  <scene>
+    <instance_visual_scene url="#Scene"/>
+  </scene>
+</COLLADA>

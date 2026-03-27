@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<COLLADA xmlns="http://www.collada.org/2005/11/COLLADASchema" version="1.4.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <asset>
+    <contributor>
+      <author>Blender User</author>
+      <authoring_tool>Blender 3.4.0 commit date:2022-12-06, commit time:18:46, hash:a95bf1ac01be</authoring_tool>
+    </contributor>
+    <created>2025-12-17T19:09:26</created>
+    <modified>2025-12-17T19:09:26</modified>
+    <unit name="meter" meter="1"/>
+    <up_axis>Z_UP</up_axis>
+  </asset>
+  <library_effects>
+    <effect id="mouse_pad_mp_1-effect">
+      <profile_COMMON>
+        <newparam sid="mouse_pad_mp_1_png-surface">
+          <surface type="2D">
+            <init_from>mouse_pad_mp_1_png</init_from>
+          </surface>
+        </newparam>
+        <newparam sid="mouse_pad_mp_1_png-sampler">
+          <sampler2D>
+            <source>mouse_pad_mp_1_png-surface</source>
+          </sampler2D>
+        </newparam>
+        <technique sid="common">
+          <lambert>
+            <emission>
+              <color sid="emission">0 0 0 1</color>
+            </emission>
+            <diffuse>
+              <texture texture="mouse_pad_mp_1_png-sampler" texcoord="UVMap"/>
+            </diffuse>
+            <index_of_refraction>
+              <float sid="ior">1.45</float>
+            </index_of_refraction>
+          </lambert>
+        </technique>
+      </profile_COMMON>
+    </effect>
+  </library_effects>
+  <library_images>
+    <image id="mouse_pad_mp_1_png" name="mouse_pad_mp_1_png">
+      <init_from>mouse_pad_mp_1.png</init_from>
+    </image>
+  </library_images>
+  <library_materials>
+    <material id="mouse_pad_mp_1-material" name="mouse_pad_mp_1">
+      <instance_effect url="#mouse_pad_mp_1-effect"/>
+    </material>
+  </library_materials>
+  <library_geometries>
+    <geometry id="mouse_pad_mp_1-mesh" name="mouse_pad_mp_1">
+      <mesh>
+        <source id="mouse_pad_mp_1-mesh-positions">
+          <float_array id="mouse_pad_mp_1-mesh-positions-array" count="72">-0.12 0.1364724 0 -0.1104 0.1460724 0 -0.1171882 0.1432606 0 -0.1104 -0.1460724 0 -0.12 -0.1364724 0 -0.1171882 -0.1432607 0 0.1104 0.1460724 0 0.12 0.1364724 0 0.1171882 0.1432607 0 0.12 -0.1364724 0 0.1104 -0.1460724 0 0.1171882 -0.1432606 0 -0.1104 0.1460724 0.003999948 -0.12 0.1364724 0.003999948 -0.1171882 0.1432606 0.003999948 -0.12 -0.1364724 0.003999948 -0.1104 -0.1460724 0.003999948 -0.1171882 -0.1432607 0.003999948 0.12 0.1364724 0.003999948 0.1104 0.1460724 0.003999948 0.1171882 0.1432607 0.003999948 0.1104 -0.1460724 0.003999948 0.12 -0.1364724 0.003999948 0.1171882 -0.1432606 0.003999948</float_array>
+          <technique_common>
+            <accessor source="#mouse_pad_mp_1-mesh-positions-array" count="24" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="mouse_pad_mp_1-mesh-normals">
+          <float_array id="mouse_pad_mp_1-mesh-normals-array" count="138">-0.9807854 -0.1950896 0 -0.9807854 0.1950896 0 -0.9807854 0.1950898 0 0 0 1 0 0 1 0 0 1 0.1950896 -0.9807855 0 -0.1950893 -0.9807855 0 -0.1950894 -0.9807856 0 0.9807854 0.1950896 0 0.9807854 -0.1950896 0 0.9807854 -0.1950898 0 0 0 -1 0 0 -1 0 0 -1 0.1950895 0.9807856 -4.01327e-6 0.7071072 0.7071065 -1.36073e-6 0.7071076 0.7071061 0 0.1950895 -0.9807854 0 0.7071074 -0.7071062 0 0.7071079 -0.7071058 0 -0.7071076 -0.7071059 0 -0.7071072 -0.7071065 0 -0.1950896 0.9807854 2.75688e-6 -0.7071073 0.7071064 1.36073e-6 -0.7071076 0.7071061 0 -0.1950892 0.9807856 4.02415e-6 0.195089 0.9807856 -5.28054e-6 -0.9807854 -0.1950898 0 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0.9807854 0.1950898 0 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1</float_array>
+          <technique_common>
+            <accessor source="#mouse_pad_mp_1-mesh-normals-array" count="46" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="mouse_pad_mp_1-mesh-map-0">
+          <float_array id="mouse_pad_mp_1-mesh-map-0-array" count="264">1 0.9222222 0.9908257 0.07777774 1 0.07777774 0.9671382 3.27826e-7 1 0.04000031 0.9671382 1 1 0.8444445 0.9908257 0.1555556 1 0.1555556 0.9908257 0.07777774 1 0.9222222 0.9908257 0.9222222 0.03286147 3.27826e-7 0 0.9600002 0.03286147 1 1 0.1555556 0.9908257 0.1222222 1 0.1222222 1 0.04444444 0.9908257 0.07777774 0.9908257 0.04444444 0.9908257 0.8444445 1 0.8666667 0.9908257 0.8666667 0.9908257 0.9444444 1 0.9222222 1 0.9444444 0.9908257 0.1555556 1 0.1222222 1 0.1555556 0.9908257 0.9444444 1 0.9222222 1 0.9444444 0.9908257 0.8444445 1 0.8666667 0.9908257 0.8666667 1 0.04444444 0.9908257 0.07777774 0.9908257 0.04444444 1 0.8444445 0.9908257 0.1555556 1 0.1555556 1 0.9222222 0.9908257 0.9222222 0.9908257 0.07777774 0 0.9600002 0 0.04000031 0.03286147 3.27826e-7 0 0.04000031 0.009635508 0.01171582 0.03286147 3.27826e-7 0.03286147 3.27826e-7 0.9671382 3.27826e-7 0.03286147 1 0 0.9600002 0.03286147 3.27826e-7 0.03286147 1 0.9671382 3.27826e-7 0.9903648 0.01171582 1 0.04000031 1 0.04000031 1 0.9600002 0.9671382 1 1 0.9600002 0.9903648 0.9882844 0.9671382 1 0.9671382 1 0.03286147 1 0.9671382 3.27826e-7 0.03286147 1 0.009635508 0.9882844 0 0.9600002 1 0.8444445 0.9908257 0.8444445 0.9908257 0.1555556 0.9908257 0.07777774 1 0.07777774 1 0.9222222 0.9671382 3.27826e-7 0.03286147 3.27826e-7 0.03286147 1 0.03286147 3.27826e-7 0.009635508 0.01171582 0 0.04000031 0 0.9600002 0.03286147 3.27826e-7 0 0.04000031 0 0.9600002 0.009635508 0.9882844 0.03286147 1 0.03286147 1 0.9671382 1 0.9671382 3.27826e-7 0.9671382 1 0.9903648 0.9882844 1 0.9600002 0.9671382 3.27826e-7 0.9671382 1 1 0.04000031 1 0.9600002 1 0.04000031 0.9671382 1 1 0.04000031 0.9903648 0.01171582 0.9671382 3.27826e-7 1 0.1555556 0.9908257 0.1555556 0.9908257 0.1222222 1 0.04444444 1 0.07777774 0.9908257 0.07777774 0.9908257 0.8444445 1 0.8444445 1 0.8666667 0.9908257 0.9444444 0.9908257 0.9222222 1 0.9222222 0.9908257 0.1555556 0.9908257 0.1222222 1 0.1222222 0.9908257 0.9444444 0.9908257 0.9222222 1 0.9222222 0.9908257 0.8444445 1 0.8444445 1 0.8666667 1 0.04444444 1 0.07777774 0.9908257 0.07777774 1 0.8444445 0.9908257 0.8444445 0.9908257 0.1555556</float_array>
+          <technique_common>
+            <accessor source="#mouse_pad_mp_1-mesh-map-0-array" count="132" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="mouse_pad_mp_1-mesh-vertices">
+          <input semantic="POSITION" source="#mouse_pad_mp_1-mesh-positions"/>
+        </vertices>
+        <triangles material="mouse_pad_mp_1-material" count="44">
+          <input semantic="VERTEX" source="#mouse_pad_mp_1-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#mouse_pad_mp_1-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#mouse_pad_mp_1-mesh-map-0" offset="2" set="0"/>
+          <p>4 0 0 13 1 1 0 2 2 15 3 3 16 4 4 22 5 5 10 6 6 16 7 7 3 8 8 7 9 9 22 10 10 9 11 11 0 12 12 6 13 13 7 14 14 6 15 15 20 16 16 8 17 17 20 16 18 7 9 19 8 17 20 21 18 21 11 19 22 23 20 23 11 19 24 22 10 25 23 20 26 16 7 27 5 21 28 3 8 29 17 22 30 4 0 31 5 21 32 12 23 33 2 24 34 14 25 35 2 24 36 13 1 37 14 25 38 1 26 39 19 27 40 6 15 41 4 0 42 15 28 43 13 1 44 19 29 45 12 30 46 13 31 47 12 30 48 14 32 49 13 31 50 13 31 51 15 3 52 18 33 53 19 29 54 13 31 55 18 33 56 15 3 57 17 34 58 16 4 59 16 4 60 21 35 61 22 5 62 21 35 63 23 36 64 22 5 65 22 5 66 18 33 67 15 3 68 18 33 69 20 37 70 19 29 71 10 6 72 21 18 73 16 7 74 7 9 75 18 38 76 22 10 77 4 39 78 0 12 79 7 14 80 0 12 81 2 40 82 1 41 83 6 13 84 0 12 85 1 41 86 6 13 87 8 42 88 7 14 89 7 14 90 9 43 91 4 39 92 9 43 93 11 40 94 10 44 95 4 39 96 9 43 97 3 45 98 10 44 99 3 45 100 9 43 101 3 45 102 5 42 103 4 39 104 6 15 105 19 27 106 20 16 107 20 16 108 18 38 109 7 9 110 21 18 111 10 6 112 11 19 113 11 19 114 9 11 115 22 10 116 16 7 117 17 22 118 5 21 119 17 22 120 15 28 121 4 0 122 12 23 123 1 26 124 2 24 125 2 24 126 0 2 127 13 1 128 1 26 129 12 23 130 19 27 131</p>
+        </triangles>
+      </mesh>
+    </geometry>
+  </library_geometries>
+  <library_visual_scenes>
+    <visual_scene id="Scene" name="Scene">
+      <node id="mouse_pad_mp_1" name="mouse_pad_mp_1" type="NODE">
+        <matrix sid="transform">1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</matrix>
+        <instance_geometry url="#mouse_pad_mp_1-mesh" name="mouse_pad_mp_1">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="mouse_pad_mp_1-material" target="#mouse_pad_mp_1-material">
+                <bind_vertex_input semantic="UVMap" input_semantic="TEXCOORD" input_set="0"/>
+              </instance_material>
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+      </node>
+    </visual_scene>
+  </library_visual_scenes>
+  <scene>
+    <instance_visual_scene url="#Scene"/>
+  </scene>
+</COLLADA>
