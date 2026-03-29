@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://wdfbdn07ufwk"
-path="res://.godot/imported/burger_low_Material.001_MetallicSmoothness.png-377f4cd683d3fb418ac1d415f645aa81.ctex"
+uid="uid://dbf0li6rui4uk"
+path="res://.godot/imported/Bottles.png-6bc3192d29aaa748637947a296703f07.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://models/items/food/burger_low_Material.001_MetallicSmoothness.png"
-dest_files=["res://.godot/imported/burger_low_Material.001_MetallicSmoothness.png-377f4cd683d3fb418ac1d415f645aa81.ctex"]
+source_file="res://models/items/alcohol/Bottles.png"
+dest_files=["res://.godot/imported/Bottles.png-6bc3192d29aaa748637947a296703f07.ctex"]
 
 [params]
 

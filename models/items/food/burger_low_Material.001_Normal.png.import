@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://d4nqjnpbmkgcm"
-path="res://.godot/imported/burger_low_Material.001_Normal.png-31e6c2035bb9deae2f7affce2129087a.ctex"
+path="res://.godot/imported/burger_low_Material.001_Normal.png-e03eb50547bfda5dc835de9048e82dda.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://temp_zip/Burger/Unity Textures/burger_low_Material.001_Normal.png"
-dest_files=["res://.godot/imported/burger_low_Material.001_Normal.png-31e6c2035bb9deae2f7affce2129087a.ctex"]
+source_file="res://models/items/food/burger_low_Material.001_Normal.png"
+dest_files=["res://.godot/imported/burger_low_Material.001_Normal.png-e03eb50547bfda5dc835de9048e82dda.ctex"]
 
 [params]
 

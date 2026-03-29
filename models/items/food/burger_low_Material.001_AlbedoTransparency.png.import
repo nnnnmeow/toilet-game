@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dwb1iw4pmrtc4"
-path="res://.godot/imported/burger_low_Material.001_AlbedoTransparency.png-232753b8c645cac4f1887d414b3dbab8.ctex"
+path="res://.godot/imported/burger_low_Material.001_AlbedoTransparency.png-f5b974284d42eba72b50a456c234bb0f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://temp_zip/Burger/Unity Textures/burger_low_Material.001_AlbedoTransparency.png"
-dest_files=["res://.godot/imported/burger_low_Material.001_AlbedoTransparency.png-232753b8c645cac4f1887d414b3dbab8.ctex"]
+source_file="res://models/items/food/burger_low_Material.001_AlbedoTransparency.png"
+dest_files=["res://.godot/imported/burger_low_Material.001_AlbedoTransparency.png-f5b974284d42eba72b50a456c234bb0f.ctex"]
 
 [params]
 

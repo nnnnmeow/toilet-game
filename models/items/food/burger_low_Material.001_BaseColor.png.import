@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://wdfbdn07ufwk"
-path="res://.godot/imported/burger_low_Material.001_MetallicSmoothness.png-377f4cd683d3fb418ac1d415f645aa81.ctex"
+uid="uid://cofgk5iedv53m"
+path="res://.godot/imported/burger_low_Material.001_BaseColor.png-d9745e627761cebc38680e74f773ab75.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://models/items/food/burger_low_Material.001_MetallicSmoothness.png"
-dest_files=["res://.godot/imported/burger_low_Material.001_MetallicSmoothness.png-377f4cd683d3fb418ac1d415f645aa81.ctex"]
+source_file="res://models/items/food/burger_low_Material.001_BaseColor.png"
+dest_files=["res://.godot/imported/burger_low_Material.001_BaseColor.png-d9745e627761cebc38680e74f773ab75.ctex"]
 
 [params]
 
