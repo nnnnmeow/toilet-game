@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://h5i6j7k8l9m0r"]
+
+[ext_resource type="Script" uid="uid://dcycaublvsarh" path="res://scripts/item_data.gd" id="1_ps023"]
+
+[resource]
+script = ExtResource("1_ps023")
+category = 5
+item_name = "Pistol"
+path_to_resource = "res://models/items/rare_item/pistol_mp_1.glb"
+metadata/_custom_type_script = "uid://dcycaublvsarh"

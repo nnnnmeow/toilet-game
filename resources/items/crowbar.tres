@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://h1i2j3k4l5m6n"]
+
+[ext_resource type="Script" uid="uid://dcycaublvsarh" path="res://scripts/item_data.gd" id="1_cw019"]
+
+[resource]
+script = ExtResource("1_cw019")
+category = 5
+item_name = "Crowbar"
+path_to_resource = "res://models/items/rare_item/Crowbar.fbx"
+metadata/_custom_type_script = "uid://dcycaublvsarh"

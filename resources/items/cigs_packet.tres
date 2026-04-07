@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://i3j4k5l6m7n8q"]
+
+[ext_resource type="Script" uid="uid://dcycaublvsarh" path="res://scripts/item_data.gd" id="1_cp030"]
+
+[resource]
+script = ExtResource("1_cp030")
+category = 0
+item_name = "Cigs Packet"
+path_to_resource = "res://models/items/shit/cigs_packet_1.glb"
+metadata/_custom_type_script = "uid://dcycaublvsarh"

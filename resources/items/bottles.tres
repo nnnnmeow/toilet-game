@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://c3d4e5f6g7h8k"]
+
+[ext_resource type="Script" uid="uid://dcycaublvsarh" path="res://scripts/item_data.gd" id="1_bt301"]
+
+[resource]
+script = ExtResource("1_bt301")
+category = 1
+item_name = "Bottles"
+path_to_resource = "res://models/items/alcohol/Bottles.fbx"
+metadata/_custom_type_script = "uid://dcycaublvsarh"

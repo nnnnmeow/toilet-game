@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://e5f6g7h8i9j0o"]
+
+[ext_resource type="Script" uid="uid://dcycaublvsarh" path="res://scripts/item_data.gd" id="1_bk005"]
+
+[resource]
+script = ExtResource("1_bk005")
+category = 4
+item_name = "Brick"
+path_to_resource = "res://models/items/materials/brick.glb"
+metadata/_custom_type_script = "uid://dcycaublvsarh"

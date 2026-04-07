@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://e4f5g6h7i8j9n"]
+
+[ext_resource type="Script" uid="uid://dcycaublvsarh" path="res://scripts/item_data.gd" id="1_gb004"]
+
+[resource]
+script = ExtResource("1_gb004")
+category = 4
+item_name = "Garbage Bag"
+path_to_resource = "res://models/items/materials/GarbageBag.fbx"
+metadata/_custom_type_script = "uid://dcycaublvsarh"

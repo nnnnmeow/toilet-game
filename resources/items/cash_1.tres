@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://f3g4h5i6j7k8n"]
+
+[ext_resource type="Script" uid="uid://dcycaublvsarh" path="res://scripts/item_data.gd" id="1_cs011"]
+
+[resource]
+script = ExtResource("1_cs011")
+category = 3
+item_name = "Cash 1"
+path_to_resource = "res://models/items/money/cash_1.glb"
+metadata/_custom_type_script = "uid://dcycaublvsarh"

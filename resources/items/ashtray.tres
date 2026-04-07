@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://i4j5k6l7m8n9r"]
+
+[ext_resource type="Script" uid="uid://dcycaublvsarh" path="res://scripts/item_data.gd" id="1_as031"]
+
+[resource]
+script = ExtResource("1_as031")
+category = 0
+item_name = "Ashtray"
+path_to_resource = "res://models/items/shit/ashtray_1.glb"
+metadata/_custom_type_script = "uid://dcycaublvsarh"

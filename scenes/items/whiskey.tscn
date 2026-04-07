@@ -1,6 +1,6 @@
 [gd_scene format=4 uid="uid://cbrpxk83nsfi1"]
 
-[ext_resource type="Script" uid="uid://n7ger1gnti55" path="res://item.gd" id="1_mom3m"]
+[ext_resource type="Script" uid="uid://n7ger1gnti55" path="res://scripts/item.gd" id="1_mom3m"]
 [ext_resource type="Texture2D" uid="uid://chnbv000gmx4f" path="res://models/bottles/textures/Material.003_baseColor.png" id="2_y7h4x"]
 [ext_resource type="Texture2D" uid="uid://yhpw8nw8mw5b" path="res://models/bottles/textures/Material.003_metallicRoughness.png" id="3_ys7nc"]
 [ext_resource type="Texture2D" uid="uid://y0sy45ijbta0" path="res://models/bottles/textures/Material.003_normal.png" id="4_eubkc"]

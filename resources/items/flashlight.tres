@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://g1h2i3j4k5l6m"]
+
+[ext_resource type="Script" uid="uid://dcycaublvsarh" path="res://scripts/item_data.gd" id="1_fl013"]
+
+[resource]
+script = ExtResource("1_fl013")
+category = 6
+item_name = "Flashlight"
+path_to_resource = "res://models/items/upgrade/Flashlight.fbx"
+metadata/_custom_type_script = "uid://dcycaublvsarh"

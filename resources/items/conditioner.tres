@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://i2j3k4l5m6n7p"]
+
+[ext_resource type="Script" uid="uid://dcycaublvsarh" path="res://scripts/item_data.gd" id="1_cd029"]
+
+[resource]
+script = ExtResource("1_cd029")
+category = 0
+item_name = "Conditioner"
+path_to_resource = "res://models/items/shit/Conditioner.fbx"
+metadata/_custom_type_script = "uid://dcycaublvsarh"

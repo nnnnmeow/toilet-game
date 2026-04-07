@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://d1e2f3g4h5i6j"]
+
+[ext_resource type="Script" uid="uid://dcycaublvsarh" path="res://scripts/item_data.gd" id="1_bg401"]
+
+[resource]
+script = ExtResource("1_bg401")
+category = 2
+item_name = "Burger"
+path_to_resource = "res://models/items/food/Burger.fbx"
+metadata/_custom_type_script = "uid://dcycaublvsarh"

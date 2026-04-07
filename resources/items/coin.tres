@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://f1g2h3i4j5k6l"]
+
+[ext_resource type="Script" uid="uid://dcycaublvsarh" path="res://scripts/item_data.gd" id="1_cn009"]
+
+[resource]
+script = ExtResource("1_cn009")
+category = 3
+item_name = "Coin"
+path_to_resource = "res://models/items/money/coin.fbx"
+metadata/_custom_type_script = "uid://dcycaublvsarh"
