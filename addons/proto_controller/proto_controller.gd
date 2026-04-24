@@ -148,7 +148,10 @@ func _physics_process(delta: float) -> void:
 				can_interact = false
 				var text = target.interact()
 				if text != null:
-					drop_text.text = "You got " + text;
+					if target.has_method("get") and target.get("last_result_text") != null and target.last_result_text != "":
+						drop_text.text = target.last_result_text
+					else:
+						drop_text.text = "You got " + text;
 				
 				await get_tree().create_timer(interaction_cooldown).timeout
 				can_interact = true

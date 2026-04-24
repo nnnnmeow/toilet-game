@@ -25,6 +25,19 @@ var categories_dictionary = {
 	100: ItemData.Categorie.Shit,
 }
 
+var event_flavor_texts = [
+	"The lights flicker for a moment.",
+	"You hear something scratching behind the wall.",
+	"A cold breeze passes through the room.",
+	"The toilet gurgles but nothing comes out.",
+	"You feel like someone is watching you.",
+	"Distant laughter echoes from the pipes.",
+	"The water in the bowl briefly turns red.",
+]
+
+# set by try_flushing, read by controller for the drop_text HUD
+var last_result_text : String = ""
+
 
 func interact():
 	var res = try_flushing();
@@ -56,6 +69,9 @@ func try_flushing():
 			spawn_item(category)
 		elif drop == "Enemy":
 			spawn_enemy()
+			last_result_text = "Something crawled out of the toilet!"
+		elif drop == "Event":
+			last_result_text = event_flavor_texts[rng.randi_range(0, event_flavor_texts.size() - 1)]
 		return drop
 	else:
 		return null
@@ -76,6 +92,7 @@ func spawn_item(category):
 	var items = item_database.get_by_category(category);
 	var item_chance = rng.randi_range(0, items.size() - 1);
 	var item_data = items[item_chance];
+	last_result_text = "You got %s" % item_data.item_name
 	var path = item_data.path_to_resource;
 	var body = RigidBody3D.new();
 	var model = load(path).instantiate();
