@@ -145,6 +145,17 @@ layout_mode = 2
 max_value = 100.0
 value = 100.0
 
+[node name="DrunkOverlay" type="ColorRect" parent="CanvasLayer" unique_id=583172649]
+unique_name_in_owner = true
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0.78, 0.55, 0.15, 0.12)
+
 [node name="DeathScreen" type="Control" parent="CanvasLayer" unique_id=643825107]
 unique_name_in_owner = true
 visible = false

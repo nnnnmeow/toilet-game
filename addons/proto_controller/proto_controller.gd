@@ -64,6 +64,7 @@ var inventory_open: bool = false
 var hunger : float = MAX_HUNGER
 var hp : float = MAX_HP
 var is_dead : bool = false
+var drunk_time : float = 0.0
 
 ## IMPORTANT REFERENCES
 @onready var head: Node3D = $Head
@@ -79,6 +80,7 @@ var is_dead : bool = false
 @onready var hp_bar: ProgressBar = %HPBar
 @onready var death_screen: Control = %DeathScreen
 @onready var restart_button: Button = %RestartButton
+@onready var drunk_overlay: ColorRect = %DrunkOverlay
 @onready var toilet = $"../Toilet(credited)"
 
 func _ready() -> void:
@@ -127,6 +129,16 @@ func _physics_process(delta: float) -> void:
 	if hp <= 0:
 		die()
 		return
+
+	# drunk wobble — roll the camera on Z for that boozy feeling
+	if drunk_time > 0:
+		drunk_time = max(drunk_time - delta, 0.0)
+		var t = Time.get_ticks_msec() / 1000.0
+		head.rotation.z = sin(t * 2.5) * 0.15
+		drunk_overlay.show()
+	else:
+		head.rotation.z = 0
+		drunk_overlay.hide()
 
 	interact_text.hide()
 

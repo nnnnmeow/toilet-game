@@ -38,12 +38,15 @@ func use():
 		controller.hunger = min(controller.hunger + 30.0, controller.MAX_HUNGER)
 		consume()
 	elif cat == ItemData.Categorie.Alcohol:
-		# drink is a gamble
+		# drink is a gamble, but always gets you drunk
+		controller.drunk_time = 10.0
 		var roll = randf()
-		if roll < 0.5:
-			controller.hunger = min(controller.hunger + 15.0, controller.MAX_HUNGER)
+		if roll < 0.3:
+			controller.hunger = min(controller.hunger + 25.0, controller.MAX_HUNGER)
+		elif roll < 0.7:
+			controller.hunger = min(controller.hunger + 10.0, controller.MAX_HUNGER)
 		else:
-			controller.hp = max(controller.hp - 10.0, 0.0)
+			controller.hp = max(controller.hp - 15.0, 0.0)
 		consume()
 	# other categories not usable from hand yet
 
