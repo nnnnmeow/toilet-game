@@ -65,6 +65,7 @@ var inventory_open: bool = false
 @onready var interact_text: Label = %InteractText
 @onready var drop_text: Label = %DropText
 @onready var day_text: Label = %DayText
+@onready var time_text: Label = %TimeText
 @onready var sleep_prompt: Label = %SleepPromptText
 @onready var toilet = $"../Toilet(credited)"
 
@@ -94,15 +95,13 @@ func _unhandled_input(event: InputEvent) -> void:
 func _physics_process(delta: float) -> void:
 	flushes_text.text = str(toilet.flush_amount)
 	day_text.text = "Day: " + str(toilet.current_day)
+	time_text.text = format_time(toilet.time_left)
 
 	interact_text.hide()
 
-	# show sleep prompt when no flushes left
+	# show "waiting" prompt when flushes are gone
 	if toilet.flush_amount <= 0:
 		sleep_prompt.show()
-		if Input.is_action_just_pressed("sleep"):
-			toilet.sleep()
-			sleep_prompt.hide()
 	else:
 		sleep_prompt.hide()
 
@@ -203,6 +202,14 @@ func capture_mouse():
 func release_mouse():
 	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 	mouse_captured = false
+
+
+## Formats seconds as MM:SS for HUD
+func format_time(seconds: float) -> String:
+	var s = int(max(seconds, 0))
+	var m = s / 60
+	var r = s % 60
+	return "%02d:%02d" % [m, r]
 
 
 ## Checks if some Input Actions haven't been created.

@@ -98,13 +98,19 @@ layout_mode = 2
 [node name="BoxContainer4" type="BoxContainer" parent="CanvasLayer" unique_id=591820133]
 offset_left = 10.0
 offset_top = 10.0
-offset_right = 150.0
-offset_bottom = 40.0
+offset_right = 200.0
+offset_bottom = 70.0
+vertical = true
 
 [node name="DayText" type="Label" parent="CanvasLayer/BoxContainer4" unique_id=802946571]
 unique_name_in_owner = true
 layout_mode = 2
 text = "Day: 1"
+
+[node name="TimeText" type="Label" parent="CanvasLayer/BoxContainer4" unique_id=409287193]
+unique_name_in_owner = true
+layout_mode = 2
+text = "15:00"
 
 [node name="SleepPromptText" type="Label" parent="CanvasLayer" unique_id=619384720]
 unique_name_in_owner = true
@@ -119,6 +125,6 @@ offset_right = 150.0
 offset_bottom = -20.0
 grow_horizontal = 2
 grow_vertical = 0
-text = "No flushes left. Press Z to sleep"
+text = "No flushes left. Wait for next day..."
 horizontal_alignment = 1
 visible = false
