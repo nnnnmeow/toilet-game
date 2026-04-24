@@ -7,6 +7,8 @@ var item_data: ItemData = null
 func _ready():
 	controller = get_tree().get_first_node_in_group("player")
 	head = controller.get_node("Head")
+	if item_data != null and item_data.category == ItemData.Categorie.Shit:
+		add_to_group("trash")
 
 func interact():
 	get_parent().remove_child(self);

@@ -114,7 +114,10 @@ func _physics_process(delta: float) -> void:
 		return
 
 	# drain hunger over time, when hunger hits 0 start losing HP (starvation)
-	hunger = max(hunger - HUNGER_PER_SECOND * delta, 0.0)
+	# trash piling up in the room accelerates hunger drain
+	var trash_count = get_tree().get_nodes_in_group("trash").size()
+	var trash_mult = 1.0 + trash_count * 0.05
+	hunger = max(hunger - HUNGER_PER_SECOND * trash_mult * delta, 0.0)
 	if hunger <= 0:
 		hp = max(hp - HUNGER_PER_SECOND * delta, 0.0)
 
