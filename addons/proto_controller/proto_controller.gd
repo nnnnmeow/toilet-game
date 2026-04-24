@@ -151,9 +151,11 @@ func _physics_process(delta: float) -> void:
 				can_interact = true
 				drop_text.hide()
 	if held_item != null:
-		if Input.is_action_just_pressed("drop"): 
+		if Input.is_action_just_pressed("drop"):
 			can_interact = true;
 			held_item.drop();
+		if Input.is_action_just_pressed("use"):
+			held_item.use()
 	
 	
 	

@@ -1,9 +1,10 @@
 extends RigidBody3D
 
-var head: Node3D                                                                                                                                                                                                                                                                      
+var head: Node3D
 var controller: Node3D
+var item_data: ItemData = null
 
-func _ready():                                                                                                                                                                                                                                                                        
+func _ready():
 	controller = get_tree().get_first_node_in_group("player")
 	head = controller.get_node("Head")
 
@@ -25,3 +26,26 @@ func drop():
 	self.freeze = false;
 	$"CollisionShape3D".disabled = false;
 	controller.held_item = null;
+
+
+func use():
+	if item_data == null:
+		return
+	var cat = item_data.category
+	if cat == ItemData.Categorie.Food:
+		controller.hunger = min(controller.hunger + 30.0, controller.MAX_HUNGER)
+		consume()
+	elif cat == ItemData.Categorie.Alcohol:
+		# drink is a gamble
+		var roll = randf()
+		if roll < 0.5:
+			controller.hunger = min(controller.hunger + 15.0, controller.MAX_HUNGER)
+		else:
+			controller.hp = max(controller.hp - 10.0, 0.0)
+		consume()
+	# other categories not usable from hand yet
+
+
+func consume():
+	controller.held_item = null
+	queue_free()

@@ -85,6 +85,7 @@ func spawn_item(category):
 	body.add_child(model);
 	body.add_child(collision);
 	body.set_script(load("res://scripts/item.gd"));
+	body.item_data = item_data
 	add_child(body)
 	body.position = self.position + Vector3(-0.15, 0.5, -0.5);
 	body.apply_impulse(Vector3(0, 4, -2));
