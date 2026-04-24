@@ -50,12 +50,20 @@ extends CharacterBody3D
 ## Is any item being held by the player?
 var held_item: Node3D = null;
 
+const MAX_HUNGER : float = 100.0
+const MAX_HP : float = 100.0
+# lose this much hunger per day (15 min). 50/900sec ~= 0.0555 per sec
+const HUNGER_PER_SECOND : float = 0.055
+
 var mouse_captured : bool = false
 var look_rotation : Vector2
 var move_speed : float = 0.0
 var freeflying : bool = false
 var interaction_cooldown : int = 2
 var inventory_open: bool = false
+var hunger : float = MAX_HUNGER
+var hp : float = MAX_HP
+var is_dead : bool = false
 
 ## IMPORTANT REFERENCES
 @onready var head: Node3D = $Head
@@ -67,12 +75,17 @@ var inventory_open: bool = false
 @onready var day_text: Label = %DayText
 @onready var time_text: Label = %TimeText
 @onready var sleep_prompt: Label = %SleepPromptText
+@onready var hunger_bar: ProgressBar = %HungerBar
+@onready var hp_bar: ProgressBar = %HPBar
+@onready var death_screen: Control = %DeathScreen
+@onready var restart_button: Button = %RestartButton
 @onready var toilet = $"../Toilet(credited)"
 
 func _ready() -> void:
 	check_input_mappings()
 	look_rotation.y = rotation.y
 	look_rotation.x = head.rotation.x
+	restart_button.pressed.connect(_on_restart_pressed)
 
 func _unhandled_input(event: InputEvent) -> void:
 	# Mouse capturing
@@ -96,6 +109,21 @@ func _physics_process(delta: float) -> void:
 	flushes_text.text = str(toilet.flush_amount)
 	day_text.text = "Day: " + str(toilet.current_day)
 	time_text.text = format_time(toilet.time_left)
+
+	if is_dead:
+		return
+
+	# drain hunger over time, when hunger hits 0 start losing HP (starvation)
+	hunger = max(hunger - HUNGER_PER_SECOND * delta, 0.0)
+	if hunger <= 0:
+		hp = max(hp - HUNGER_PER_SECOND * delta, 0.0)
+
+	hunger_bar.value = hunger
+	hp_bar.value = hp
+
+	if hp <= 0:
+		die()
+		return
 
 	interact_text.hide()
 
@@ -202,6 +230,18 @@ func capture_mouse():
 func release_mouse():
 	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 	mouse_captured = false
+
+
+func die() -> void:
+	is_dead = true
+	can_move = false
+	velocity = Vector3.ZERO
+	death_screen.show()
+	release_mouse()
+
+
+func _on_restart_pressed() -> void:
+	get_tree().reload_current_scene()
 
 
 ## Formats seconds as MM:SS for HUD
