@@ -64,6 +64,8 @@ var inventory_open: bool = false
 @onready var flushes_text: Label = %FlushesAmountText
 @onready var interact_text: Label = %InteractText
 @onready var drop_text: Label = %DropText
+@onready var day_text: Label = %DayText
+@onready var sleep_prompt: Label = %SleepPromptText
 @onready var toilet = $"../Toilet(credited)"
 
 func _ready() -> void:
@@ -91,9 +93,19 @@ func _unhandled_input(event: InputEvent) -> void:
 
 func _physics_process(delta: float) -> void:
 	flushes_text.text = str(toilet.flush_amount)
-	
+	day_text.text = "Day: " + str(toilet.current_day)
+
 	interact_text.hide()
-	
+
+	# show sleep prompt when no flushes left
+	if toilet.flush_amount <= 0:
+		sleep_prompt.show()
+		if Input.is_action_just_pressed("sleep"):
+			toilet.sleep()
+			sleep_prompt.hide()
+	else:
+		sleep_prompt.hide()
+
 	# will do that later
 	# if Input.is_action_just_pressed("toggle_inventory"):
 		

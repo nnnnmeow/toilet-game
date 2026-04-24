@@ -2,7 +2,10 @@ extends StaticBody3D
 
 @onready var item_database: Resource = preload("res://resources/item_database.tres");
 
-var flush_amount : int = 10
+const FLUSHES_PER_DAY : int = 10
+
+var flush_amount : int = FLUSHES_PER_DAY
+var current_day : int = 1
 var rng = RandomNumberGenerator.new()
 var events_dictionary = {
 	1: "Event",
@@ -52,6 +55,11 @@ func try_flushing():
 		return drop
 	else:
 		return null
+
+func sleep():
+	current_day += 1
+	flush_amount = FLUSHES_PER_DAY
+
 
 func spawn_item(category):
 	var items = item_database.get_by_category(category);
