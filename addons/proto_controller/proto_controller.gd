@@ -150,12 +150,15 @@ func _physics_process(delta: float) -> void:
 				await get_tree().create_timer(interaction_cooldown).timeout
 				can_interact = true
 				drop_text.hide()
+	if Input.is_action_just_pressed("use"):
+		if not try_parry():
+			if held_item != null:
+				held_item.use()
+
 	if held_item != null:
 		if Input.is_action_just_pressed("drop"):
 			can_interact = true;
 			held_item.drop();
-		if Input.is_action_just_pressed("use"):
-			held_item.use()
 	
 	
 	
@@ -232,6 +235,19 @@ func capture_mouse():
 func release_mouse():
 	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 	mouse_captured = false
+
+
+## Try to lick a nearby enemy back. Returns true if an enemy was parried.
+func try_parry() -> bool:
+	var enemies = get_tree().get_nodes_in_group("enemies")
+	for enemy in enemies:
+		if not enemy.has_method("parry"):
+			continue
+		var d = global_position.distance_to(enemy.global_position)
+		if d < 2.5:
+			enemy.parry()
+			return true
+	return false
 
 
 func die() -> void:

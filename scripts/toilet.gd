@@ -54,6 +54,8 @@ func try_flushing():
 					category = categories_dictionary[categories]
 					break
 			spawn_item(category)
+		elif drop == "Enemy":
+			spawn_enemy()
 		return drop
 	else:
 		return null
@@ -89,3 +91,34 @@ func spawn_item(category):
 	add_child(body)
 	body.position = self.position + Vector3(-0.15, 0.5, -0.5);
 	body.apply_impulse(Vector3(0, 4, -2));
+
+
+func spawn_enemy():
+	var body = CharacterBody3D.new()
+
+	var mesh_instance = MeshInstance3D.new()
+	var mesh = BoxMesh.new()
+	mesh.size = Vector3(0.5, 1.4, 0.5)
+	mesh_instance.mesh = mesh
+	mesh_instance.position.y = 0.7
+
+	var mat = StandardMaterial3D.new()
+	mat.albedo_color = Color(0.15, 0, 0)
+	mat.emission_enabled = true
+	mat.emission = Color(0.7, 0, 0)
+	mesh_instance.material_override = mat
+
+	var collision = CollisionShape3D.new()
+	var shape = CapsuleShape3D.new()
+	shape.radius = 0.3
+	shape.height = 1.4
+	collision.shape = shape
+	collision.position.y = 0.7
+	collision.name = "CollisionShape3D"
+
+	body.add_child(mesh_instance)
+	body.add_child(collision)
+	body.set_script(load("res://scripts/enemy.gd"))
+
+	get_tree().current_scene.add_child(body)
+	body.global_position = global_position + Vector3(0, 0.5, 0)
