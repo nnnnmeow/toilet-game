@@ -47,6 +47,8 @@ extends CharacterBody3D
 @export var input_freefly : String = "freefly"
 ## Name of Input Action to interact.
 @export var input_interact : String = "interact"
+## Name of Input Action to interact.
+@export var input_use : String = "use"
 ## Is any item being held by the player?
 var held_item: Node3D = null;
 

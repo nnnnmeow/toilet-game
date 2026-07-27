@@ -11,7 +11,7 @@ var time_left : float = DAY_LENGTH_SECONDS
 var rng = RandomNumberGenerator.new()
 var events_dictionary = {
 	1: "Event",
-	17: "Enemy",
+	2: "Enemy",
 	100: "Item",
 }
 
@@ -41,7 +41,7 @@ var last_result_text : String = ""
 
 func interact():
 	var res = try_flushing();
-	if res != "":
+	if str(res) != "no_flush":
 		%FlushSFX.play()
 		%AnimationPlayer.play("flush")
 		return res
@@ -74,7 +74,7 @@ func try_flushing():
 			last_result_text = event_flavor_texts[rng.randi_range(0, event_flavor_texts.size() - 1)]
 		return drop
 	else:
-		return null
+		return "no_flush"
 
 func _process(delta: float) -> void:
 	time_left -= delta

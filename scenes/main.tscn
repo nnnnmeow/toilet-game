@@ -66,7 +66,6 @@ material = ExtResource("2_gqmmt")
 
 [node name="ProtoController" parent="." unique_id=735761445 groups=["player"] instance=ExtResource("1_ig7tw")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.33710304, 0.8795223, -2.0523949)
-can_freefly = true
 
 [node name="OmniLight3D" type="OmniLight3D" parent="." unique_id=1383329618]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.20360775, 3.0180457, -0.47763246)
